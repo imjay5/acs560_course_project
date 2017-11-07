@@ -21,7 +21,7 @@ import (
 func main() {
 	fmt.Println("Launching server...")
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 }
 
 type test_struct struct {
@@ -30,7 +30,6 @@ type test_struct struct {
 }
 
 func handler(w http.ResponseWriter, req *http.Request) {
-	log.Println("Method ", req.Method)
 	var test test_struct
 	err := json.NewDecoder(req.Body).Decode(&test)
 	if err != nil {
