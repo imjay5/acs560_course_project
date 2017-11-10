@@ -14,7 +14,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -24,19 +23,8 @@ func main() {
 	http.ListenAndServe(":8081", nil)
 }
 
-type test_struct struct {
-	User string `json:"user"`
-	Pwd  string `json:"password"`
-}
-
 func handler(w http.ResponseWriter, req *http.Request) {
-	var test test_struct
-	err := json.NewDecoder(req.Body).Decode(&test)
-	if err != nil {
-		http.Error(w, err.Error(), 400)
-		return
-	}
-	fmt.Println("******* ", test.User)
-	str := `{"page": 1, "fruits": ["apple", "peach"]}`
-	fmt.Fprintf(w, str)
+	controller := Controller{}
+	response := controller.process_data(json.NewDecoder(req.Body), req.FormValue("key"))
+	fmt.Fprintf(w, response)
 }
