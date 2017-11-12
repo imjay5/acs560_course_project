@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
+    <!-- Jaya -->
     <Compile Include="FrmAdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +90,29 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+	<!-- Kanika -->
+	<Compile Include="Client.cs" />
+	<Compile Include="Exam.cs" />
+	<Compile Include="FrmCreateQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateQuestions.Designer.cs">
+      <DependentUpon>FrmCreateQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateExam.Designer.cs">
+      <DependentUpon>FrmCreateExam.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Question.cs" />
+    <EmbeddedResource Include="FrmCreateExam.resx">
+      <DependentUpon>FrmCreateExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateQuestions.resx">
+      <DependentUpon>FrmCreateQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+	
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

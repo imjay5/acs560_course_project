@@ -146,7 +146,7 @@
             // 
             this.lblDiffLevel.AutoSize = true;
             this.lblDiffLevel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiffLevel.Location = new System.Drawing.Point(73, 437);
+            this.lblDiffLevel.Location = new System.Drawing.Point(73, 476);
             this.lblDiffLevel.Name = "lblDiffLevel";
             this.lblDiffLevel.Size = new System.Drawing.Size(109, 48);
             this.lblDiffLevel.TabIndex = 10;
@@ -160,7 +160,7 @@
             this.listBxDiffLevel.Items.AddRange(new object[] {
             "Average",
             "Difficult"});
-            this.listBxDiffLevel.Location = new System.Drawing.Point(177, 437);
+            this.listBxDiffLevel.Location = new System.Drawing.Point(177, 476);
             this.listBxDiffLevel.Name = "listBxDiffLevel";
             this.listBxDiffLevel.Size = new System.Drawing.Size(147, 52);
             this.listBxDiffLevel.TabIndex = 11;
@@ -168,7 +168,7 @@
             // btnAddQuestion
             // 
             this.btnAddQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuestion.Location = new System.Drawing.Point(177, 524);
+            this.btnAddQuestion.Location = new System.Drawing.Point(177, 563);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(229, 37);
             this.btnAddQuestion.TabIndex = 13;
@@ -198,7 +198,7 @@
             "D"});
             this.listBxAnswer.Location = new System.Drawing.Point(177, 387);
             this.listBxAnswer.Name = "listBxAnswer";
-            this.listBxAnswer.Size = new System.Drawing.Size(147, 28);
+            this.listBxAnswer.Size = new System.Drawing.Size(147, 52);
             this.listBxAnswer.TabIndex = 16;
             // 
             // prgBarAvg
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 573);
+            this.ClientSize = new System.Drawing.Size(671, 710);
             this.Controls.Add(this.lblDisplayDiff);
             this.Controls.Add(this.lblDisplayAvg);
             this.Controls.Add(this.lblDiff);

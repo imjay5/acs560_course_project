@@ -30,6 +30,7 @@ namespace exam_portal
             question_label = lblQuestion.Text;
             lblQuestion.Text = lblQuestion.Text + (ques.count+1);
             prgBarAvg.Maximum = prgBarDiff.Maximum = PassingValues.NoOfQuestion;
+            PassingValues.NoOfAverageQuestions = PassingValues.NoOfDifficultQuestions = 0;
             prgBarAvg.Value = prgBarDiff.Value = 0;
         }
         
@@ -69,6 +70,7 @@ namespace exam_portal
             ques.option_d = txtOptionD.Text;
             ques.answer = listBxAnswer.Text;
             ques.difficulty_level = listBxDiffLevel.Text;
+            /*
             if (PassingValues.NoOfAverageQuestions == ques.count && ques.difficulty_level == "Average")
             {
                 //msg that no more average questions can be added
@@ -80,7 +82,7 @@ namespace exam_portal
                 //msg that no more difficult questions can be added
                 MessageBox.Show("You have already added required number of difficult questions");
                 return;
-            }
+            }*/
             string response = ques.addQuestionJson(ques);
             if (response == "success")
             {
