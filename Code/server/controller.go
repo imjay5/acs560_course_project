@@ -1,7 +1,7 @@
 /**************************************************************
  * controller.go
  *
- * Implements functions for receiving data from C# client
+ * Implements handler for different request types from C# client
  *
  * 	                Version History
  *   Author          Type of change          Description
@@ -13,26 +13,30 @@ package main
 
 import (
 	"encoding/json"
-	// "fmt"
-	//"net/http"
 )
 
 type Controller struct {
 }
 
 func (controller *Controller) process_data(msg *json.Decoder, handler string) string {
-	var response string 
+	var response string
 	switch handler {
-	    case "register": 
-	    obj := UserDetails{}
-	    response = obj.register(msg)
-	    
-	    case "login":
-	    obj := LoginDetails{}
-	    response = obj.login(msg)    
+	case "register":
+		obj := UserDetails{}
+		response = obj.register(msg)
+
+	case "login":
+		obj := UserDetails{}
+		response = obj.login(msg)
+
+	case "create":
+		obj := Exam{}
+		response = obj.create_exam(msg)
+
+	case "addQ":
+		obj := Question{}
+		response = obj.add_question(msg)
+
 	}
-	//fmt.Println("******* ", test.User)
-	//str := `{"page": 1, "fruits": ["apple", "peach"]}`
-	//fmt.Fprintf(w, str)
 	return response
 }
