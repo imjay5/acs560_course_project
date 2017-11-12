@@ -26,14 +26,21 @@ namespace exam_portal
         {
             string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
             string response = c.send_data(ans, "login");
-            MessageBox.Show(ans);
-            MessageBox.Show(response);
+            //MessageBox.Show(ans);
+            //MessageBox.Show(response);
             Dummy dummy = JsonConvert.DeserializeObject<Dummy>(response);
             // MessageBox.Show(dummy.ToString());
 
             if (txtBoxUserName.Text.Equals(user.email) && txtBoxPwd.Text.Equals(user.password))
             {
-                MessageBox.Show("You are logged in successfully");
+                if(dummy.admin_key.Equals(true) && dummy.msg.Equals("success"))
+                {
+                    FrmAdminHome adminHome = new FrmAdminHome();
+                    this.Hide();
+                    adminHome.Show();
+                }
+
+                //MessageBox.Show("You are logged in successfully");
             }
             else
             {
