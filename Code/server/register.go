@@ -13,13 +13,13 @@ type UserDetails struct {
 }
 
 func (user UserDetails) register(msg *json.Decoder) string {
-	var test UserDetails
+	var userDetails UserDetails
 	var op Database_Operations
-	json := msg.Decode(&test)
+	json := msg.Decode(&userDetails)
 	fmt.Println("Success", json)
 
 	query := "insert into user_details values(NULL,?,?,?,0,NULL,FALSE)"
-	parameters := []interface{}{test.Name, test.Email, test.Pwd}
+	parameters := []interface{}{userDetails.Name, userDetails.Email, userDetails.Pwd}
 	flag, result := op.insert_data(query, parameters)
 
 	// if flag == true {
@@ -27,22 +27,22 @@ func (user UserDetails) register(msg *json.Decoder) string {
 	// }
 	log.Println("flag", flag)
 	log.Println(result)
-	// fmt.Println(test.Email)
+	// fmt.Println(userDetails.Email)
 	response := `{"msg": "success"}`
 	return response
 }
 
 func (login UserDetails) login(msg *json.Decoder) string {
 	op := Database_Operations{}
-	var test UserDetails
+	var userDetails UserDetails
 	var user_id int
 	var admin_key bool
 
-	json := msg.Decode(&test)
+	json := msg.Decode(&userDetails)
 	fmt.Println("Success", json)
 
 	query := "select user_id,admin_key from user_details where email=? and password=?"
-	parameters := []string{test.Email, test.Pwd}
+	parameters := []string{userDetails.Email, userDetails.Pwd}
 	rows := op.get_data(query, parameters)
 	for rows.Next() {
 
@@ -51,6 +51,7 @@ func (login UserDetails) login(msg *json.Decoder) string {
 			log.Fatal(err)
 		}
 		log.Println("select result ", user_id, admin_key)
+
 	}
 
 	response := fmt.Sprintf("%s%d%s%t%s", `{"msg": "success", "user_id": `, user_id, `,"admin_key" : `, admin_key, `}`)
