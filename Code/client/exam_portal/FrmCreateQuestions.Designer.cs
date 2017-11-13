@@ -58,7 +58,7 @@
             this.lblQuestion.AutoSize = true;
             this.lblQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblQuestion.Location = new System.Drawing.Point(302, 313);
+            this.lblQuestion.Location = new System.Drawing.Point(302, 297);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(99, 24);
             this.lblQuestion.TabIndex = 0;
@@ -67,7 +67,7 @@
             // rTxtQuestion
             // 
             this.rTxtQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtQuestion.Location = new System.Drawing.Point(479, 313);
+            this.rTxtQuestion.Location = new System.Drawing.Point(479, 297);
             this.rTxtQuestion.Name = "rTxtQuestion";
             this.rTxtQuestion.Size = new System.Drawing.Size(229, 50);
             this.rTxtQuestion.TabIndex = 1;
@@ -78,7 +78,7 @@
             this.lblOptionA.AutoSize = true;
             this.lblOptionA.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOptionA.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOptionA.Location = new System.Drawing.Point(302, 391);
+            this.lblOptionA.Location = new System.Drawing.Point(302, 386);
             this.lblOptionA.Name = "lblOptionA";
             this.lblOptionA.Size = new System.Drawing.Size(97, 24);
             this.lblOptionA.TabIndex = 2;
@@ -87,7 +87,7 @@
             // txtOptionA
             // 
             this.txtOptionA.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOptionA.Location = new System.Drawing.Point(479, 386);
+            this.txtOptionA.Location = new System.Drawing.Point(479, 381);
             this.txtOptionA.Name = "txtOptionA";
             this.txtOptionA.Size = new System.Drawing.Size(100, 32);
             this.txtOptionA.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.lblOptionB.AutoSize = true;
             this.lblOptionB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOptionB.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOptionB.Location = new System.Drawing.Point(302, 451);
+            this.lblOptionB.Location = new System.Drawing.Point(302, 448);
             this.lblOptionB.Name = "lblOptionB";
             this.lblOptionB.Size = new System.Drawing.Size(97, 24);
             this.lblOptionB.TabIndex = 4;
@@ -106,7 +106,7 @@
             // txtOptionB
             // 
             this.txtOptionB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOptionB.Location = new System.Drawing.Point(479, 446);
+            this.txtOptionB.Location = new System.Drawing.Point(479, 443);
             this.txtOptionB.Name = "txtOptionB";
             this.txtOptionB.Size = new System.Drawing.Size(100, 32);
             this.txtOptionB.TabIndex = 5;
@@ -199,6 +199,7 @@
             // 
             // listBxAnswer
             // 
+            this.listBxAnswer.BackColor = System.Drawing.SystemColors.Control;
             this.listBxAnswer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBxAnswer.FormattingEnabled = true;
             this.listBxAnswer.ItemHeight = 24;
@@ -214,14 +215,14 @@
             // 
             // prgBarAvg
             // 
-            this.prgBarAvg.Location = new System.Drawing.Point(925, 251);
+            this.prgBarAvg.Location = new System.Drawing.Point(849, 236);
             this.prgBarAvg.Name = "prgBarAvg";
             this.prgBarAvg.Size = new System.Drawing.Size(100, 23);
             this.prgBarAvg.TabIndex = 17;
             // 
             // prgBarDiff
             // 
-            this.prgBarDiff.Location = new System.Drawing.Point(801, 251);
+            this.prgBarDiff.Location = new System.Drawing.Point(966, 236);
             this.prgBarDiff.Name = "prgBarDiff";
             this.prgBarDiff.Size = new System.Drawing.Size(100, 23);
             this.prgBarDiff.TabIndex = 18;
@@ -230,7 +231,7 @@
             // 
             this.lblAvg.AutoSize = true;
             this.lblAvg.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAvg.Location = new System.Drawing.Point(960, 277);
+            this.lblAvg.Location = new System.Drawing.Point(884, 262);
             this.lblAvg.Name = "lblAvg";
             this.lblAvg.Size = new System.Drawing.Size(28, 17);
             this.lblAvg.TabIndex = 19;
@@ -240,7 +241,7 @@
             // 
             this.lblDiff.AutoSize = true;
             this.lblDiff.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDiff.Location = new System.Drawing.Point(836, 277);
+            this.lblDiff.Location = new System.Drawing.Point(1001, 262);
             this.lblDiff.Name = "lblDiff";
             this.lblDiff.Size = new System.Drawing.Size(28, 17);
             this.lblDiff.TabIndex = 20;
@@ -251,7 +252,7 @@
             this.lblDisplayAvg.AutoSize = true;
             this.lblDisplayAvg.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayAvg.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDisplayAvg.Location = new System.Drawing.Point(948, 231);
+            this.lblDisplayAvg.Location = new System.Drawing.Point(872, 216);
             this.lblDisplayAvg.Name = "lblDisplayAvg";
             this.lblDisplayAvg.Size = new System.Drawing.Size(62, 18);
             this.lblDisplayAvg.TabIndex = 21;
@@ -262,7 +263,7 @@
             this.lblDisplayDiff.AutoSize = true;
             this.lblDisplayDiff.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayDiff.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDisplayDiff.Location = new System.Drawing.Point(821, 231);
+            this.lblDisplayDiff.Location = new System.Drawing.Point(986, 216);
             this.lblDisplayDiff.Name = "lblDisplayDiff";
             this.lblDisplayDiff.Size = new System.Drawing.Size(54, 18);
             this.lblDisplayDiff.TabIndex = 22;
@@ -273,7 +274,7 @@
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.lblHeading.Location = new System.Drawing.Point(475, 202);
+            this.lblHeading.Location = new System.Drawing.Point(475, 189);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(232, 24);
             this.lblHeading.TabIndex = 23;
@@ -284,7 +285,7 @@
             this.lblTop.AutoSize = true;
             this.lblTop.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTop.ForeColor = System.Drawing.Color.GreenYellow;
-            this.lblTop.Location = new System.Drawing.Point(473, 49);
+            this.lblTop.Location = new System.Drawing.Point(473, 47);
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(185, 34);
             this.lblTop.TabIndex = 24;
@@ -295,7 +296,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1096, 1045);
+            this.ClientSize = new System.Drawing.Size(1096, 1037);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblDisplayDiff);
@@ -320,6 +321,7 @@
             this.Controls.Add(this.rTxtQuestion);
             this.Controls.Add(this.lblQuestion);
             this.Name = "frmCreateQuestions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Questions";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1096, 1045);
+            this.ClientSize = new System.Drawing.Size(1096, 1037);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblMsg);
@@ -189,6 +189,7 @@
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmCreateExam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Exam";
             this.Load += new System.EventHandler(this.frmCreateExam_Load);
             this.ResumeLayout(false);
