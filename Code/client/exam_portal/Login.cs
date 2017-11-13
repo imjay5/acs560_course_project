@@ -40,6 +40,13 @@ namespace exam_portal
                     adminHome.Show();
                 }
 
+                if (dummy.admin_key.Equals(false) && dummy.msg.Equals("success"))
+                {
+                    frmUserHome userHome = new frmUserHome();
+                    this.Hide();
+                    userHome.Show();
+                }
+
                 //MessageBox.Show("You are logged in successfully");
             }
             else

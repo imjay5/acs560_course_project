@@ -58,6 +58,12 @@
     <Compile Include="FrmAdminHome.Designer.cs">
       <DependentUpon>FrmAdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUserHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserHome.Designer.cs">
+      <DependentUpon>FrmUserHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <EmbeddedResource Include="FrmAdminHome.resx">
       <DependentUpon>FrmAdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserHome.resx">
+      <DependentUpon>FrmUserHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,10 +99,10 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-	<!-- Kanika -->
-	<Compile Include="Client.cs" />
-	<Compile Include="Exam.cs" />
-	<Compile Include="FrmCreateQuestions.cs">
+    <!-- Kanika -->
+    <Compile Include="Client.cs" />
+    <Compile Include="Exam.cs" />
+    <Compile Include="FrmCreateQuestions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCreateQuestions.Designer.cs">
@@ -105,14 +114,13 @@
     <Compile Include="FrmCreateExam.Designer.cs">
       <DependentUpon>FrmCreateExam.cs</DependentUpon>
     </Compile>
-	<Compile Include="Question.cs" />
+    <Compile Include="Question.cs" />
     <EmbeddedResource Include="FrmCreateExam.resx">
       <DependentUpon>FrmCreateExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateQuestions.resx">
       <DependentUpon>FrmCreateQuestions.cs</DependentUpon>
     </EmbeddedResource>
-	
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

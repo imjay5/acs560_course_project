@@ -1,6 +1,6 @@
 ﻿namespace exam_portal
 {
-    partial class frmAdminHome
+    partial class frmUserHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCreateExam = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnCreateExam
+            // label1
             // 
-            this.btnCreateExam.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnCreateExam.Location = new System.Drawing.Point(316, 269);
-            this.btnCreateExam.Name = "btnCreateExam";
-            this.btnCreateExam.Size = new System.Drawing.Size(179, 42);
-            this.btnCreateExam.TabIndex = 0;
-            this.btnCreateExam.Text = "Create Exam";
-            this.btnCreateExam.UseVisualStyleBackColor = false;
-            this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(63, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hello User,";
             // 
-            // frmAdminHome
+            // frmUserHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(822, 602);
-            this.Controls.Add(this.btnCreateExam);
-            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "frmAdminHome";
+            this.Controls.Add(this.label1);
+            this.Name = "frmUserHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.Text = "User Home";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnCreateExam;
+        private System.Windows.Forms.Label label1;
     }
 }
