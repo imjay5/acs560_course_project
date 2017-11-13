@@ -18,7 +18,7 @@ func (user UserDetails) register(msg *json.Decoder) string {
 	json := msg.Decode(&test)
 	fmt.Println("Success", json)
 
-	query := "insert into user_details values(NULL,?,?,?,1,NULL,FALSE)"
+	query := "insert into user_details values(NULL,?,?,?,0,NULL,FALSE)"
 	parameters := []interface{}{test.Name, test.Email, test.Pwd}
 	flag, result := op.insert_data(query, parameters)
 
