@@ -86,6 +86,7 @@
             // 
             this.chkBxTimer.AutoSize = true;
             this.chkBxTimer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBxTimer.ForeColor = System.Drawing.SystemColors.Control;
             this.chkBxTimer.Location = new System.Drawing.Point(511, 459);
             this.chkBxTimer.Name = "chkBxTimer";
             this.chkBxTimer.Size = new System.Drawing.Size(64, 28);
@@ -142,7 +143,7 @@
             this.lblMsg.AutoSize = true;
             this.lblMsg.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.ForeColor = System.Drawing.Color.SandyBrown;
-            this.lblMsg.Location = new System.Drawing.Point(463, 389);
+            this.lblMsg.Location = new System.Drawing.Point(507, 399);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 21);
             this.lblMsg.TabIndex = 9;
@@ -189,6 +190,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmCreateExam";
             this.Text = "Create Exam";
+            this.Load += new System.EventHandler(this.frmCreateExam_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

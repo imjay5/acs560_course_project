@@ -48,7 +48,7 @@ namespace exam_portal
             }
             if (listBxAnswer.Text == string.Empty)
             {
-                MessageBox.Show("Please select answer");
+                MessageBox.Show("Please select correct answer");
                 return;
             }
             if (listBxDiffLevel.Text == string.Empty)

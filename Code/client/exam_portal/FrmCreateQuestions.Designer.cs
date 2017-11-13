@@ -178,7 +178,7 @@
             this.btnAddQuestion.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnAddQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddQuestion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddQuestion.Location = new System.Drawing.Point(479, 813);
+            this.btnAddQuestion.Location = new System.Drawing.Point(479, 803);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(229, 37);
             this.btnAddQuestion.TabIndex = 13;

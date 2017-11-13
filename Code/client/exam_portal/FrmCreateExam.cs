@@ -82,5 +82,10 @@ namespace exam_portal
             int totalQ = int.Parse(txtQuestions.Text);
             lblMsg.Text = "Please add " + totalQ + " difficult and " + totalQ + " average questions for this exam.";
         }
+
+        private void frmCreateExam_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
