@@ -38,13 +38,16 @@
             this.lblTimerVal = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.lblHeading = new System.Windows.Forms.Label();
+            this.lblTop = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(97, 75);
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitle.Location = new System.Drawing.Point(294, 304);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(115, 24);
             this.lblTitle.TabIndex = 0;
@@ -53,7 +56,7 @@
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(289, 72);
+            this.txtTitle.Location = new System.Drawing.Point(511, 301);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(260, 32);
             this.txtTitle.TabIndex = 1;
@@ -62,7 +65,8 @@
             // 
             this.lblQuestions.AutoSize = true;
             this.lblQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestions.Location = new System.Drawing.Point(97, 135);
+            this.lblQuestions.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblQuestions.Location = new System.Drawing.Point(294, 364);
             this.lblQuestions.Name = "lblQuestions";
             this.lblQuestions.Size = new System.Drawing.Size(109, 48);
             this.lblQuestions.TabIndex = 2;
@@ -71,7 +75,8 @@
             // txtQuestions
             // 
             this.txtQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuestions.Location = new System.Drawing.Point(289, 135);
+            this.txtQuestions.Location = new System.Drawing.Point(511, 364);
+            this.txtQuestions.MaxLength = 2;
             this.txtQuestions.Name = "txtQuestions";
             this.txtQuestions.Size = new System.Drawing.Size(100, 32);
             this.txtQuestions.TabIndex = 3;
@@ -81,7 +86,7 @@
             // 
             this.chkBxTimer.AutoSize = true;
             this.chkBxTimer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBxTimer.Location = new System.Drawing.Point(289, 230);
+            this.chkBxTimer.Location = new System.Drawing.Point(511, 459);
             this.chkBxTimer.Name = "chkBxTimer";
             this.chkBxTimer.Size = new System.Drawing.Size(64, 28);
             this.chkBxTimer.TabIndex = 4;
@@ -93,7 +98,8 @@
             // 
             this.lblTimerReq.AutoSize = true;
             this.lblTimerReq.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerReq.Location = new System.Drawing.Point(97, 231);
+            this.lblTimerReq.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTimerReq.Location = new System.Drawing.Point(294, 460);
             this.lblTimerReq.Name = "lblTimerReq";
             this.lblTimerReq.Size = new System.Drawing.Size(178, 24);
             this.lblTimerReq.TabIndex = 5;
@@ -103,7 +109,7 @@
             // 
             this.txtTimerVal.Enabled = false;
             this.txtTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimerVal.Location = new System.Drawing.Point(289, 282);
+            this.txtTimerVal.Location = new System.Drawing.Point(511, 511);
             this.txtTimerVal.Name = "txtTimerVal";
             this.txtTimerVal.Size = new System.Drawing.Size(100, 32);
             this.txtTimerVal.TabIndex = 6;
@@ -112,7 +118,8 @@
             // 
             this.lblTimerVal.AutoSize = true;
             this.lblTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerVal.Location = new System.Drawing.Point(97, 285);
+            this.lblTimerVal.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTimerVal.Location = new System.Drawing.Point(294, 514);
             this.lblTimerVal.Name = "lblTimerVal";
             this.lblTimerVal.Size = new System.Drawing.Size(162, 48);
             this.lblTimerVal.TabIndex = 7;
@@ -120,28 +127,56 @@
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnCreate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(253, 368);
+            this.btnCreate.Location = new System.Drawing.Point(511, 605);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(208, 44);
             this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "Create Exam";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Text = "Add Exam";
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
-            this.lblMsg.Location = new System.Drawing.Point(266, 160);
+            this.lblMsg.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsg.ForeColor = System.Drawing.Color.SandyBrown;
+            this.lblMsg.Location = new System.Drawing.Point(463, 389);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(0, 17);
+            this.lblMsg.Size = new System.Drawing.Size(0, 21);
             this.lblMsg.TabIndex = 9;
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.lblHeading.Location = new System.Drawing.Point(507, 202);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(137, 24);
+            this.lblHeading.TabIndex = 10;
+            this.lblHeading.Text = "Create Exam";
+            // 
+            // lblTop
+            // 
+            this.lblTop.AutoSize = true;
+            this.lblTop.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop.ForeColor = System.Drawing.Color.GreenYellow;
+            this.lblTop.Location = new System.Drawing.Point(473, 49);
+            this.lblTop.Name = "lblTop";
+            this.lblTop.Size = new System.Drawing.Size(185, 34);
+            this.lblTop.TabIndex = 11;
+            this.lblTop.Text = "Exam Portal";
             // 
             // frmCreateExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 520);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1096, 1045);
+            this.Controls.Add(this.lblTop);
+            this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblTimerVal);
@@ -171,6 +206,8 @@
         private System.Windows.Forms.Label lblTimerVal;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.Label lblTop;
     }
 }
 

@@ -58,7 +58,7 @@ namespace exam_portal
             }
             var allEqual = new[] { txtOptionA.Text, txtOptionB.Text, txtOptionC.Text, txtOptionD.Text }.Distinct().Count() == 1;
             Console.WriteLine(allEqual);
-            if (txtOptionA == txtOptionB || txtOptionB == txtOptionC || txtOptionC == txtOptionD || txtOptionD == txtOptionA || txtOptionA == txtOptionC || txtOptionB == txtOptionD)
+            if (txtOptionA.Text == txtOptionB.Text || txtOptionB.Text == txtOptionC.Text || txtOptionC.Text == txtOptionD.Text || txtOptionD.Text == txtOptionA.Text || txtOptionA.Text == txtOptionC.Text || txtOptionB.Text == txtOptionD.Text)
             {
                 MessageBox.Show("Please select different answer for each option");
                 return;
@@ -70,19 +70,18 @@ namespace exam_portal
             ques.option_d = txtOptionD.Text;
             ques.answer = listBxAnswer.Text;
             ques.difficulty_level = listBxDiffLevel.Text;
-            /*
-            if (PassingValues.NoOfAverageQuestions == ques.count && ques.difficulty_level == "Average")
+            if (PassingValues.NoOfAverageQuestions == PassingValues.NoOfQuestion && ques.difficulty_level == "Average")
             {
-                //msg that no more average questions can be added
+                //msg that no more average questions can be added    
                 MessageBox.Show("You have already added required number of average questions");
                 return;
             }
-            if (PassingValues.NoOfDifficultQuestions == ques.count && ques.difficulty_level == "Difficult")
+            if (PassingValues.NoOfDifficultQuestions == PassingValues.NoOfQuestion && ques.difficulty_level == "Difficult")
             {
                 //msg that no more difficult questions can be added
                 MessageBox.Show("You have already added required number of difficult questions");
                 return;
-            }*/
+            }
             string response = ques.addQuestionJson(ques);
             if (response == "success")
             {
@@ -92,9 +91,9 @@ namespace exam_portal
                     clear();
                 } else
                 {
-                    frmCreateExam createExam = new frmCreateExam();
-                    createExam.Closed += (s, args) => this.Close();
-                    createExam.Show();
+                    frmAdminHome adminHome = new frmAdminHome();
+                    adminHome.Closed += (s, args) => this.Close();
+                    adminHome.Show();
                     this.Hide();
                 }
             }

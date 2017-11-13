@@ -46,6 +46,11 @@ namespace exam_portal
                     MessageBox.Show("Please enter only numbers");
                     return;
                 }
+                if (int.Parse(txtQuestions.Text) > 20)
+                {
+                    MessageBox.Show("Number of questions should be less than 20");
+                    return;
+                }
             }
             exam.exam_title = txtTitle.Text;
             exam.no_of_question = int.Parse(txtQuestions.Text);
