@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace exam_portal
 {
-    public partial class FrmAdminHome : Form
+    public partial class frmAdminHome : Form
     {
-        public FrmAdminHome()
+        public frmAdminHome()
         {
             InitializeComponent();
         }

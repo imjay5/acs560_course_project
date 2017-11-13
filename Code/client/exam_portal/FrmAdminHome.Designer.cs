@@ -1,6 +1,6 @@
 ﻿namespace exam_portal
 {
-    partial class FrmAdminHome
+    partial class frmAdminHome
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.btnCreateExam.UseVisualStyleBackColor = true;
             this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
             // 
-            // FrmAdminHome
+            // frmAdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,7 +49,7 @@
             this.Controls.Add(this.btnCreateExam);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "FrmAdminHome";
+            this.Name = "frmAdminHome";
             this.Text = "Home";
             this.ResumeLayout(false);
 

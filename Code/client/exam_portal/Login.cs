@@ -35,7 +35,7 @@ namespace exam_portal
             {
                 if(dummy.admin_key.Equals(true) && dummy.msg.Equals("success"))
                 {
-                    FrmAdminHome adminHome = new FrmAdminHome();
+                    frmAdminHome adminHome = new frmAdminHome();
                     this.Hide();
                     adminHome.Show();
                 }
