@@ -29,11 +29,11 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 		obj := UserDetails{}
 		response = obj.login(msg)
 
-	case "create":
+	case "addExam":
 		obj := Exam{}
 		response = obj.create_exam(msg)
 
-	case "addQ":
+	case "addQuestion":
 		obj := Question{}
 		response = obj.add_question(msg)
 
@@ -45,6 +45,16 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 		obj := QuestionDetails{}
 		response = obj.takeExam(msg)
 
+	case "getExam":
+		obj := Exam{}
+		response = obj.get_exam(msg)
+
+	case "updateExam":
+		obj := Exam{}
+		response = obj.update_exam(msg)
+	case "getQuestion":
+		obj := Question{}
+		response = obj.get_next_question(msg)
 	}
 	return response
 }

@@ -24,11 +24,11 @@ func (exam ExamDetails) selectExam(msg *json.Decoder) string {
 	fmt.Println("Success", json)
 
 	query := "select exam_id,exam_title from exams"
-	parameters := []string{}
+	parameters := []interface{}{}
 	flag, rows := op.get_data(query, parameters)
 
 	query1 := "select count(*) from exams"
-	parameters1 := []string{}
+	parameters1 := []interface{}{}
 	_, rows1 := op.get_data(query1, parameters1)
 
 	for rows1.Next() {

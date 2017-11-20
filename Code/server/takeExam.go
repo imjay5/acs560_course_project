@@ -30,11 +30,11 @@ func (question1 QuestionDetails) takeExam(msg *json.Decoder) string {
 	fmt.Println("Success", json)
 
 	query := "select question_id,question,option_a,option_b,option_c,option_d,answer,difficulty_level from questions where exam_id = 19"
-	parameters := []string{}
+	parameters := []interface{}{}
 	flag, rows := op.get_data(query, parameters)
 
 	query1 := "select count(*) from questions where exam_id = 19"
-	parameters1 := []string{}
+	parameters1 := []interface{}{}
 	_, rows1 := op.get_data(query1, parameters1)
 
 	for rows1.Next() {
