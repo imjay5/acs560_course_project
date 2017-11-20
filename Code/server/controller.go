@@ -37,6 +37,14 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 		obj := Question{}
 		response = obj.add_question(msg)
 
+	case "selectExam":
+		obj := ExamDetails{}
+		response = obj.selectExam(msg)
+
+	case "takeExam":
+		obj := QuestionDetails{}
+		response = obj.takeExam(msg)
+
 	}
 	return response
 }
