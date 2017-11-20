@@ -39,6 +39,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblTop = new System.Windows.Forms.Label();
             this.lblHeading = new System.Windows.Forms.Label();
+            this.linkLblLogin = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblName
@@ -162,6 +163,18 @@
             this.lblHeading.TabIndex = 16;
             this.lblHeading.Text = "Register";
             // 
+            // linkLblLogin
+            // 
+            this.linkLblLogin.AutoSize = true;
+            this.linkLblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblLogin.Location = new System.Drawing.Point(355, 512);
+            this.linkLblLogin.Name = "linkLblLogin";
+            this.linkLblLogin.Size = new System.Drawing.Size(201, 16);
+            this.linkLblLogin.TabIndex = 17;
+            this.linkLblLogin.TabStop = true;
+            this.linkLblLogin.Text = "Already Registered? Login Here";
+            this.linkLblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblLogin_LinkClicked);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +182,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(822, 602);
+            this.Controls.Add(this.linkLblLogin);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.btnRegister);
@@ -201,5 +215,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.LinkLabel linkLblLogin;
     }
 }

@@ -113,7 +113,7 @@ namespace exam_portal
             //MessageBox.Show(ans);
             //MessageBox.Show(response);
             ResponseJSON res = JsonConvert.DeserializeObject<ResponseJSON>(response);
-            //MessageBox.Show(dummy.msg);
+            //MessageBox.Show(res.msg);
 
             if (res.msg.Equals("success"))
             {
@@ -127,8 +127,19 @@ namespace exam_portal
                 }
 
             }
+            else
+            {
+                MessageBox.Show("Already registered! Please login");
+            }
             
-        }        
+        }
+
+        private void linkLblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmLogin loginForm = new frmLogin();
+            this.Hide();
+            loginForm.Show();
+        }
     }
 
     public class UserDetails
