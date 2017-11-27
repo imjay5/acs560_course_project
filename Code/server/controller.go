@@ -6,7 +6,7 @@
  * 	                Version History
  *   Author          Type of change          Description
  *   Kanika			 Addition				 Created File
-
+ *   Kanika			 Addition				 Added method process_data()
  **************************************************************/
 
 package main
@@ -45,6 +45,14 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 		obj := QuestionDetails{}
 		response = obj.takeExam(msg)
 
+	case "takenExams":
+		obj := UserTakenExams{}
+		response = obj.takenExams(msg)
+
+	case "updateGrades":
+		obj := GradeDetails{}
+		response = obj.updateGrades(msg)
+
 	case "getExam":
 		obj := Exam{}
 		response = obj.get_exam(msg)
@@ -55,6 +63,24 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 	case "getQuestion":
 		obj := Question{}
 		response = obj.get_next_question(msg)
+	case "deleteQuestion":
+		obj := Question{}
+		response = obj.delete_question(msg)
+	case "updateQuestion":
+		obj := Question{}
+		response = obj.update_question(msg)
+	case "getAllQuestions":
+		obj := Question{}
+		response = obj.get_all_questions(msg)
+	case "updateExamStatus":
+		obj := Exam{}
+		response = obj.update_exam_status(msg)
+	case "getAllExams":
+		obj := Exam{}
+		response = obj.get_all_exams(msg)
+	case "getReport":
+		obj := Exam{}
+		response = obj.get_report(msg)
 	}
 	return response
 }
