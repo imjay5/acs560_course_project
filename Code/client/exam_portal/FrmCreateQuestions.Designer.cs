@@ -40,7 +40,7 @@
             this.txtOptionD = new System.Windows.Forms.TextBox();
             this.lblDiffLevel = new System.Windows.Forms.Label();
             this.listBxDiffLevel = new System.Windows.Forms.ListBox();
-            this.btnAddQuestion = new System.Windows.Forms.Button();
+            this.btnQuestion = new System.Windows.Forms.Button();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.listBxAnswer = new System.Windows.Forms.ListBox();
             this.prgBarAvg = new System.Windows.Forms.ProgressBar();
@@ -69,7 +69,7 @@
             this.rTxtQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTxtQuestion.Location = new System.Drawing.Point(479, 297);
             this.rTxtQuestion.Name = "rTxtQuestion";
-            this.rTxtQuestion.Size = new System.Drawing.Size(229, 50);
+            this.rTxtQuestion.Size = new System.Drawing.Size(373, 50);
             this.rTxtQuestion.TabIndex = 1;
             this.rTxtQuestion.Text = "";
             // 
@@ -89,7 +89,7 @@
             this.txtOptionA.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOptionA.Location = new System.Drawing.Point(479, 381);
             this.txtOptionA.Name = "txtOptionA";
-            this.txtOptionA.Size = new System.Drawing.Size(100, 32);
+            this.txtOptionA.Size = new System.Drawing.Size(373, 32);
             this.txtOptionA.TabIndex = 3;
             // 
             // lblOptionB
@@ -108,7 +108,7 @@
             this.txtOptionB.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOptionB.Location = new System.Drawing.Point(479, 443);
             this.txtOptionB.Name = "txtOptionB";
-            this.txtOptionB.Size = new System.Drawing.Size(100, 32);
+            this.txtOptionB.Size = new System.Drawing.Size(373, 32);
             this.txtOptionB.TabIndex = 5;
             // 
             // txtOptionC
@@ -116,7 +116,7 @@
             this.txtOptionC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOptionC.Location = new System.Drawing.Point(479, 503);
             this.txtOptionC.Name = "txtOptionC";
-            this.txtOptionC.Size = new System.Drawing.Size(100, 32);
+            this.txtOptionC.Size = new System.Drawing.Size(373, 32);
             this.txtOptionC.TabIndex = 6;
             // 
             // lblOptionC
@@ -146,7 +146,7 @@
             this.txtOptionD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOptionD.Location = new System.Drawing.Point(479, 563);
             this.txtOptionD.Name = "txtOptionD";
-            this.txtOptionD.Size = new System.Drawing.Size(100, 32);
+            this.txtOptionD.Size = new System.Drawing.Size(373, 32);
             this.txtOptionD.TabIndex = 9;
             // 
             // lblDiffLevel
@@ -173,18 +173,18 @@
             this.listBxDiffLevel.Size = new System.Drawing.Size(147, 52);
             this.listBxDiffLevel.TabIndex = 11;
             // 
-            // btnAddQuestion
+            // btnQuestion
             // 
-            this.btnAddQuestion.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnAddQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuestion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddQuestion.Location = new System.Drawing.Point(479, 803);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(229, 37);
-            this.btnAddQuestion.TabIndex = 13;
-            this.btnAddQuestion.Text = "Add Question";
-            this.btnAddQuestion.UseVisualStyleBackColor = false;
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            this.btnQuestion.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnQuestion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuestion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnQuestion.Location = new System.Drawing.Point(468, 823);
+            this.btnQuestion.Name = "btnQuestion";
+            this.btnQuestion.Size = new System.Drawing.Size(229, 37);
+            this.btnQuestion.TabIndex = 13;
+            this.btnQuestion.Text = "Add Question";
+            this.btnQuestion.UseVisualStyleBackColor = false;
+            this.btnQuestion.Click += new System.EventHandler(this.btnQuestion_Click);
             // 
             // lblAnswer
             // 
@@ -307,7 +307,7 @@
             this.Controls.Add(this.prgBarAvg);
             this.Controls.Add(this.listBxAnswer);
             this.Controls.Add(this.lblAnswer);
-            this.Controls.Add(this.btnAddQuestion);
+            this.Controls.Add(this.btnQuestion);
             this.Controls.Add(this.listBxDiffLevel);
             this.Controls.Add(this.lblDiffLevel);
             this.Controls.Add(this.txtOptionD);
@@ -342,7 +342,7 @@
         private System.Windows.Forms.TextBox txtOptionD;
         private System.Windows.Forms.Label lblDiffLevel;
         private System.Windows.Forms.ListBox listBxDiffLevel;
-        private System.Windows.Forms.Button btnAddQuestion;
+        private System.Windows.Forms.Button btnQuestion;
         private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.ListBox listBxAnswer;
         private System.Windows.Forms.ProgressBar prgBarAvg;

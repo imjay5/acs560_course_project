@@ -5,6 +5,8 @@
  * 	                Version History
  *   Author          Type of change          Description
  *   Kanika			 Addition				 Created File
+ *   Kanika          Addition                Added  createQuestionJson(), getQuestionJson(), deleteQuestionJson(), updateQuestionJson()
+ *   Kanika          Addition                Added updateQuestionCount(), getAllQuestionsJson(), updateExamStatusJson()
 
  **************************************************************/
 using System;
@@ -27,25 +29,81 @@ namespace exam_portal
         public string option_d;
         public string answer;
         public string difficulty_level;
-        public int count=0;
+        public int count=1;
         public string msg;
 
-        public string addQuestionJson(Question question)
+        public string createQuestionJson(Question question)
         {
             question.exam_id = PassingValues.ExamId;
-            if (question.difficulty_level == "Average")
-            {
-                PassingValues.NoOfAverageQuestions += 1;
-            } else
-            {
-                PassingValues.NoOfDifficultQuestions += 1;
-            }
             string json = JsonConvert.SerializeObject(question);
             Console.WriteLine("json " + json);
             Client client = new Client();
-            String response = client.send_data(json, "addQ");
+            updateQuestionCount(question);
+            string response = client.send_data(json, "addQuestion");
             Question quesResponseObj = JsonConvert.DeserializeObject<Question>(response);
             return quesResponseObj.msg;    
+        }
+
+        /*
+        public Question getQuestionJson(Question question)
+        {
+            question.question_id = PassingValues.QuestionId;
+            question.exam_id = PassingValues.ExamId;
+            //updateQuestionCount(question, "increment");
+            string json = JsonConvert.SerializeObject(question);
+            Console.WriteLine("json " + json);
+            Client client = new Client();
+            String response = client.send_data(json, "getQuestion");
+            Question quesResponseObj = JsonConvert.DeserializeObject<Question>(response);
+            PassingValues.QuestionId = quesResponseObj.question_id;
+            return quesResponseObj;
+        }*/
+
+        public string deleteQuestionJson(Question question)
+        {
+            question.exam_id = PassingValues.ExamId;
+            string json = JsonConvert.SerializeObject(question);
+            Console.WriteLine("json " + json);
+            Client client = new Client();
+            String response = client.send_data(json, "deleteQuestion");
+            Question quesResponseObj = JsonConvert.DeserializeObject<Question>(response);
+            return quesResponseObj.msg;
+        }
+
+        public string updateQuestionJson(Question question)
+        {
+            question.exam_id = PassingValues.ExamId;
+            string json = JsonConvert.SerializeObject(question);
+            Console.WriteLine("json " + json);
+            Client client = new Client();
+            String response = client.send_data(json, "updateQuestion");
+            Question quesResponseObj = JsonConvert.DeserializeObject<Question>(response);
+            return quesResponseObj.msg;
+        }
+
+        public void updateQuestionCount(Question question)
+        {
+            if (question.difficulty_level == "Average")
+            {
+                PassingValues.NoOfAverageQuestions += 1;
+            }
+            else if(question.difficulty_level == "Difficult")
+            {
+                PassingValues.NoOfDifficultQuestions += 1;
+            }
+        }
+
+        public List<Question> getAllQuestionsJson()
+        {
+            Question question = new Question();
+            question.exam_id = PassingValues.ExamId;
+            
+            string json = JsonConvert.SerializeObject(question);
+            Console.WriteLine("json " + json);
+            Client client = new Client();
+            String response = client.send_data(json, "getAllQuestions");
+            List<Question> questionsList= JsonConvert.DeserializeObject<List<Question>>(response);
+            return questionsList;
         }
     }
 }

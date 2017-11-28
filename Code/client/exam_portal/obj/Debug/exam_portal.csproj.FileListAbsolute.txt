@@ -19,9 +19,7 @@ C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\ac
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\bin\Debug\Newtonsoft.Json.dll
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.csprojResolveAssemblyReference.cache
-C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.Login.resources
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.Properties.Resources.resources
-C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.Register.resources
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmCreateExam.resources
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmCreateQuestions.resources
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.csproj.GenerateResource.Cache
@@ -29,3 +27,11 @@ C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\ac
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.exe
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.pdb
 C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.FrmAdminHome.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmUserHome.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmLogin.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmRegister.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmGradeReport.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmStartExam.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmTakeExam.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.FrmEditQuestions.resources
+C:\Users\kanika\Desktop\Kanika\Masters\Fall 2017\Software Engineering\Project\acs560_course_project\acs560_course_project\Code\client\exam_portal\obj\Debug\exam_portal.frmReport.resources

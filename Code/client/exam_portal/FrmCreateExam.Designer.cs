@@ -36,10 +36,11 @@
             this.lblTimerReq = new System.Windows.Forms.Label();
             this.txtTimerVal = new System.Windows.Forms.TextBox();
             this.lblTimerVal = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnExam = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblTop = new System.Windows.Forms.Label();
+            this.btnGoToQuestions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -58,7 +59,7 @@
             this.txtTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.Location = new System.Drawing.Point(511, 301);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(260, 32);
+            this.txtTitle.Size = new System.Drawing.Size(388, 32);
             this.txtTitle.TabIndex = 1;
             // 
             // lblQuestions
@@ -126,17 +127,16 @@
             this.lblTimerVal.TabIndex = 7;
             this.lblTimerVal.Text = "Timer Duration\r\n(in minutes)\r\n";
             // 
-            // btnCreate
+            // btnExam
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnCreate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(511, 605);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(208, 44);
-            this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "Add Exam";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnExam.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnExam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExam.Location = new System.Drawing.Point(511, 605);
+            this.btnExam.Name = "btnExam";
+            this.btnExam.Size = new System.Drawing.Size(208, 44);
+            this.btnExam.TabIndex = 8;
+            this.btnExam.UseVisualStyleBackColor = false;
+            this.btnExam.Click += new System.EventHandler(this.btnExam_Click);
             // 
             // lblMsg
             // 
@@ -170,16 +170,30 @@
             this.lblTop.TabIndex = 11;
             this.lblTop.Text = "Exam Portal";
             // 
+            // btnGoToQuestions
+            // 
+            this.btnGoToQuestions.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnGoToQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoToQuestions.Location = new System.Drawing.Point(764, 605);
+            this.btnGoToQuestions.Name = "btnGoToQuestions";
+            this.btnGoToQuestions.Size = new System.Drawing.Size(208, 44);
+            this.btnGoToQuestions.TabIndex = 12;
+            this.btnGoToQuestions.Text = "Go To Questions";
+            this.btnGoToQuestions.UseVisualStyleBackColor = false;
+            this.btnGoToQuestions.Visible = false;
+            this.btnGoToQuestions.Click += new System.EventHandler(this.btnGoToQuestions_Click);
+            // 
             // frmCreateExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1096, 1037);
+            this.Controls.Add(this.btnGoToQuestions);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblMsg);
-            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnExam);
             this.Controls.Add(this.lblTimerVal);
             this.Controls.Add(this.txtTimerVal);
             this.Controls.Add(this.lblTimerReq);
@@ -207,10 +221,11 @@
         private System.Windows.Forms.Label lblTimerReq;
         private System.Windows.Forms.TextBox txtTimerVal;
         private System.Windows.Forms.Label lblTimerVal;
-        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnExam;
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblTop;
+        private System.Windows.Forms.Button btnGoToQuestions;
     }
 }
 

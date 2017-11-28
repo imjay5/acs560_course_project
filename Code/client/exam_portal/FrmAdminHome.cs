@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**************************************************************
+ * 
+ * Exam Class containing method to form json to send to server and extract json returned from server
+ *
+ * 	                Version History
+ *   Author          Type of change          Description
+ *   Jaya			 Creation				 Created File
+ *   Kanika          Addition                Added methods btnCreateExam_Click(), addDisplayProperties(), frmAdminHome_Load()
+ *   Kanika          Addition                Added methods button_Click(), displayExamData(), btnReport_Click()
+ **************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +23,148 @@ namespace exam_portal
 {
     public partial class frmAdminHome : Form
     {
+   
         public frmAdminHome()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnCreateExam_Click(object sender, EventArgs e)
         {
             frmCreateExam createExam = new frmCreateExam();
             this.Hide();
+            PassingValues.Action = "AddExam";
             createExam.Show();
+        }
+        
+        private void addDisplayProperties(Control obj)
+        {
+            obj.BringToFront();
+            obj.Font = new Font("Consolas", 10, FontStyle.Regular);
+            obj.ForeColor = Color.White;
+            pnlExams.Controls.Add(obj);
+        }
+
+        private void frmAdminHome_Load(object sender, EventArgs e)
+        {
+            displayExamData();
+        }
+
+        protected void button_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            Exam exam = new Exam();
+            exam.exam_id = Int32.Parse(button.Name);
+            PassingValues.ExamId = exam.exam_id;
+            if (button.Tag.ToString() == "hide")
+            {
+                exam.status = "Active";
+                string msg = exam.updateExamStatusJson(exam);
+                if (msg == "success")
+                {
+                    button.BackColor = Color.Green;
+                    button.Text = "Published";
+                    button.Tag = "publish";
+                }
+            } else if (button.Tag.ToString() == "edit")
+            {
+                PassingValues.Action = "EditExam";
+                frmCreateExam createExam = new frmCreateExam();
+                this.Hide();
+                createExam.Show();
+            } else
+            {
+                exam.status = "Complete";
+                string msg = exam.updateExamStatusJson(exam);
+                if (msg == "success")
+                {
+                    button.BackColor = Color.Gray;
+                    button.Text = "Unpublished";
+                    button.Tag = "hide";
+                }
+            }
+        }
+
+        private void displayExamData()
+        {
+            Exam exam = new Exam();
+            List<Exam> examsList = exam.getAllExamsJson();
+            int lblY = 14;
+
+            Label lblExamId = new Label();
+            lblExamId.Text = "Exam ";
+            lblExamId.Location = new Point(30, lblY);
+            lblExamId.Size = new Size(72, 24);
+            addDisplayProperties(lblExamId);
+
+            Label lblExamTitle = new Label();
+            lblExamTitle.Text = "Exam Title";
+            lblExamTitle.Location = new Point(161, lblY);
+            lblExamTitle.Size = new Size(100, 24);
+            addDisplayProperties(lblExamTitle);
+
+            Label lblNoQuestions = new Label();
+            lblNoQuestions.Text = "# questions";
+            lblNoQuestions.Location = new Point(374, lblY);
+            lblNoQuestions.Size = new Size(150, 24);
+            addDisplayProperties(lblNoQuestions);
+
+            for (int i = 0; i < examsList.Count(); i++)
+            {
+                lblY += 50;
+
+                Label lblExamIdValue = new Label();
+                lblExamIdValue.Text = (i + 1).ToString();
+                lblExamIdValue.Location = new Point(20, lblY);
+                lblExamIdValue.Size = new Size(72, 24);
+                addDisplayProperties(lblExamIdValue);
+
+                Label lblExamTitleValue = new Label();
+                lblExamTitleValue.Text = examsList[i].exam_title.ToString();
+                lblExamTitleValue.Location = new Point(161, lblY);
+                lblExamTitleValue.Size = new Size(100, 24);
+                addDisplayProperties(lblExamTitleValue);
+
+                Label lblNoQuestionsValue = new Label();
+                lblNoQuestionsValue.Text = examsList[i].no_of_question.ToString();
+                lblNoQuestionsValue.Location = new Point(374, lblY);
+                lblNoQuestionsValue.Size = new Size(72, 24);
+                addDisplayProperties(lblNoQuestionsValue);
+
+                Button btn = new Button();
+                if (examsList[i].status.ToString() == "Inactive")
+                {        
+                    btn.Text = "Edit";
+                    btn.Tag = "edit";
+                    btn.Name = examsList[i].exam_id.ToString();
+                    btn.BackColor = Color.Yellow;
+                }
+                else if (examsList[i].status.ToString() == "Complete")
+                {
+                    btn.Text = "Unpublished";
+                    btn.Tag = "hide";
+                    btn.Name = examsList[i].exam_id.ToString();
+                    btn.BackColor = Color.Gray;
+                }
+                else
+                {
+                    btn.Text = "Published";
+                    btn.Tag = "publish";
+                    btn.Name = examsList[i].exam_id.ToString();
+                    btn.BackColor = Color.Green;
+                }
+                btn.Location = new Point(534, lblY);
+                btn.Size = new Size(110,24);
+                this.Controls.Add(btn);
+                btn.Click += new EventHandler(button_Click);
+                addDisplayProperties(btn);
+            }
+        }    
+        
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport();
+            frm.Show();
         }
     }
 }

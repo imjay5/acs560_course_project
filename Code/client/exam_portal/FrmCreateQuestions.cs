@@ -24,18 +24,24 @@ namespace exam_portal
     {
         Question ques = new Question();
         string question_label;
+        string mode = "new";
+        string curr_diff_level = "";
+        int delete_count = 0;
+        int insert_flag = 0;
+
         public frmCreateQuestions()
         {
             InitializeComponent();
             question_label = lblQuestion.Text;
-            lblQuestion.Text = lblQuestion.Text + (ques.count+1);
+            lblQuestion.Text = lblQuestion.Text + " " + ques.count;
             prgBarAvg.Maximum = prgBarDiff.Maximum = PassingValues.NoOfQuestion;
             PassingValues.NoOfAverageQuestions = PassingValues.NoOfDifficultQuestions = 0;
             prgBarAvg.Value = prgBarDiff.Value = 0;
         }
         
-        private void btnAddQuestion_Click(object sender, EventArgs e)
+        private void btnQuestion_Click(object sender, EventArgs e)
         {
+            string response = "";
             if (rTxtQuestion.Text == string.Empty)
             {
                 MessageBox.Show("Please enter question");
@@ -56,8 +62,8 @@ namespace exam_portal
                 MessageBox.Show("Please select difficulty level");
                 return;
             }
+        
             var allEqual = new[] { txtOptionA.Text, txtOptionB.Text, txtOptionC.Text, txtOptionD.Text }.Distinct().Count() == 1;
-            Console.WriteLine(allEqual);
             if (txtOptionA.Text == txtOptionB.Text || txtOptionB.Text == txtOptionC.Text || txtOptionC.Text == txtOptionD.Text || txtOptionD.Text == txtOptionA.Text || txtOptionA.Text == txtOptionC.Text || txtOptionB.Text == txtOptionD.Text)
             {
                 MessageBox.Show("Please select different answer for each option");
@@ -70,34 +76,35 @@ namespace exam_portal
             ques.option_d = txtOptionD.Text;
             ques.answer = listBxAnswer.Text;
             ques.difficulty_level = listBxDiffLevel.Text;
+           
             if (PassingValues.NoOfAverageQuestions == PassingValues.NoOfQuestion && ques.difficulty_level == "Average")
             {
-                //msg that no more average questions can be added    
                 MessageBox.Show("You have already added required number of average questions");
                 return;
             }
             if (PassingValues.NoOfDifficultQuestions == PassingValues.NoOfQuestion && ques.difficulty_level == "Difficult")
             {
-                //msg that no more difficult questions can be added
                 MessageBox.Show("You have already added required number of difficult questions");
                 return;
             }
-            string response = ques.addQuestionJson(ques);
+            response = ques.createQuestionJson(ques);              
             if (response == "success")
             {
                 ques.count = ques.count + 1;
-                if (ques.count < (PassingValues.NoOfQuestion*2))
+                if (ques.count < (PassingValues.NoOfQuestion * 2))
                 {
                     clear();
-                } else
+                }
+                else
                 {
-                    frmAdminHome adminHome = new frmAdminHome();
-                    adminHome.Closed += (s, args) => this.Close();
-                    adminHome.Show();
-                    this.Hide();
+                    Exam exam = new Exam();
+                    exam.status = "Complete";
+                    exam.updateExamStatusJson(exam);
+                    goToAdminHome();
                 }
             }
         }
+
         private void clear()
         {
             rTxtQuestion.Text = string.Empty;
@@ -107,16 +114,12 @@ namespace exam_portal
             txtOptionD.Text = string.Empty;
             listBxAnswer.ClearSelected();
             listBxDiffLevel.ClearSelected();
-            lblQuestion.Text = question_label + (ques.count + 1);
-            prgBarAvg.Value = PassingValues.NoOfAverageQuestions;
-            update_progress_bar(prgBarAvg, "Average");
-            prgBarDiff.Value = PassingValues.NoOfDifficultQuestions;
-            update_progress_bar(prgBarDiff,"Difficult");
+            updateDisplay();
             if ((ques.count - 1) == (PassingValues.NoOfQuestion*2))
             {
                 if (PassingValues.NoOfAverageQuestions == PassingValues.NoOfQuestion && PassingValues.NoOfDifficultQuestions == PassingValues.NoOfQuestion)
                 {
-                    btnAddQuestion.Text = "Submit";
+                    btnQuestion.Text = "Submit";
                 }            
             }
         }
@@ -131,6 +134,24 @@ namespace exam_portal
             {
                 lblDiff.Text = percent.ToString() + "%";
             }
+        }
+  
+        private void updateDisplay()
+        {
+            lblQuestion.Text = question_label + " " + ques.count;
+            prgBarAvg.Value = PassingValues.NoOfAverageQuestions;
+            update_progress_bar(prgBarAvg, "Average");
+            prgBarDiff.Value = PassingValues.NoOfDifficultQuestions;
+            update_progress_bar(prgBarDiff, "Difficult");
+        }
+
+        private void goToAdminHome()
+        {
+            //PassingValues.QuestionId = 0;
+            frmAdminHome adminHome = new frmAdminHome();
+            adminHome.Closed += (s, args) => this.Close();
+            adminHome.Show();
+            this.Hide();
         }
     }
 }
