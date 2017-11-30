@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateQuestions));
             this.lblQuestion = new System.Windows.Forms.Label();
             this.rTxtQuestion = new System.Windows.Forms.RichTextBox();
             this.lblOptionA = new System.Windows.Forms.Label();
@@ -296,7 +297,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1096, 1037);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(820, 594);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblDisplayDiff);

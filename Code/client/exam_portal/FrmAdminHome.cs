@@ -41,7 +41,7 @@ namespace exam_portal
         {
             obj.BringToFront();
             obj.Font = new Font("Consolas", 10, FontStyle.Regular);
-            obj.ForeColor = Color.White;
+            //obj.ForeColor = Color.White;
             pnlExams.Controls.Add(obj);
         }
 
@@ -89,24 +89,24 @@ namespace exam_portal
         {
             Exam exam = new Exam();
             List<Exam> examsList = exam.getAllExamsJson();
-            int lblY = 14;
+            int lblY = 86;
 
             Label lblExamId = new Label();
             lblExamId.Text = "Exam ";
-            lblExamId.Location = new Point(30, lblY);
+            lblExamId.Location = new Point(60, lblY);
             lblExamId.Size = new Size(72, 24);
             addDisplayProperties(lblExamId);
 
             Label lblExamTitle = new Label();
             lblExamTitle.Text = "Exam Title";
             lblExamTitle.Location = new Point(161, lblY);
-            lblExamTitle.Size = new Size(100, 24);
+            lblExamTitle.Size = new Size(180, 24);
             addDisplayProperties(lblExamTitle);
 
             Label lblNoQuestions = new Label();
             lblNoQuestions.Text = "# questions";
-            lblNoQuestions.Location = new Point(374, lblY);
-            lblNoQuestions.Size = new Size(150, 24);
+            lblNoQuestions.Location = new Point(354, lblY);
+            lblNoQuestions.Size = new Size(10, 24);
             addDisplayProperties(lblNoQuestions);
 
             for (int i = 0; i < examsList.Count(); i++)
@@ -115,20 +115,20 @@ namespace exam_portal
 
                 Label lblExamIdValue = new Label();
                 lblExamIdValue.Text = (i + 1).ToString();
-                lblExamIdValue.Location = new Point(20, lblY);
+                lblExamIdValue.Location = new Point(60, lblY);
                 lblExamIdValue.Size = new Size(72, 24);
                 addDisplayProperties(lblExamIdValue);
 
                 Label lblExamTitleValue = new Label();
                 lblExamTitleValue.Text = examsList[i].exam_title.ToString();
                 lblExamTitleValue.Location = new Point(161, lblY);
-                lblExamTitleValue.Size = new Size(100, 24);
+                lblExamTitleValue.Size = new Size(180, 24);
                 addDisplayProperties(lblExamTitleValue);
 
                 Label lblNoQuestionsValue = new Label();
                 lblNoQuestionsValue.Text = examsList[i].no_of_question.ToString();
-                lblNoQuestionsValue.Location = new Point(374, lblY);
-                lblNoQuestionsValue.Size = new Size(72, 24);
+                lblNoQuestionsValue.Location = new Point(354, lblY);
+                lblNoQuestionsValue.Size = new Size(10, 24);
                 addDisplayProperties(lblNoQuestionsValue);
 
                 Button btn = new Button();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateExam));
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblQuestions = new System.Windows.Forms.Label();
@@ -46,9 +47,10 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(294, 304);
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(186, 253);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(115, 24);
             this.lblTitle.TabIndex = 0;
@@ -57,7 +59,7 @@
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(511, 301);
+            this.txtTitle.Location = new System.Drawing.Point(371, 253);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(388, 32);
             this.txtTitle.TabIndex = 1;
@@ -65,9 +67,10 @@
             // lblQuestions
             // 
             this.lblQuestions.AutoSize = true;
+            this.lblQuestions.BackColor = System.Drawing.Color.Transparent;
             this.lblQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestions.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblQuestions.Location = new System.Drawing.Point(294, 364);
+            this.lblQuestions.ForeColor = System.Drawing.Color.Black;
+            this.lblQuestions.Location = new System.Drawing.Point(186, 313);
             this.lblQuestions.Name = "lblQuestions";
             this.lblQuestions.Size = new System.Drawing.Size(109, 48);
             this.lblQuestions.TabIndex = 2;
@@ -76,7 +79,7 @@
             // txtQuestions
             // 
             this.txtQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuestions.Location = new System.Drawing.Point(511, 364);
+            this.txtQuestions.Location = new System.Drawing.Point(371, 313);
             this.txtQuestions.MaxLength = 2;
             this.txtQuestions.Name = "txtQuestions";
             this.txtQuestions.Size = new System.Drawing.Size(100, 32);
@@ -86,22 +89,24 @@
             // chkBxTimer
             // 
             this.chkBxTimer.AutoSize = true;
+            this.chkBxTimer.BackColor = System.Drawing.Color.Transparent;
             this.chkBxTimer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBxTimer.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkBxTimer.Location = new System.Drawing.Point(511, 459);
+            this.chkBxTimer.ForeColor = System.Drawing.Color.Black;
+            this.chkBxTimer.Location = new System.Drawing.Point(371, 390);
             this.chkBxTimer.Name = "chkBxTimer";
             this.chkBxTimer.Size = new System.Drawing.Size(64, 28);
             this.chkBxTimer.TabIndex = 4;
             this.chkBxTimer.Text = "Yes";
-            this.chkBxTimer.UseVisualStyleBackColor = true;
+            this.chkBxTimer.UseVisualStyleBackColor = false;
             this.chkBxTimer.CheckedChanged += new System.EventHandler(this.chkBxTimer_CheckedChanged);
             // 
             // lblTimerReq
             // 
             this.lblTimerReq.AutoSize = true;
+            this.lblTimerReq.BackColor = System.Drawing.Color.Transparent;
             this.lblTimerReq.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerReq.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTimerReq.Location = new System.Drawing.Point(294, 460);
+            this.lblTimerReq.ForeColor = System.Drawing.Color.Black;
+            this.lblTimerReq.Location = new System.Drawing.Point(186, 391);
             this.lblTimerReq.Name = "lblTimerReq";
             this.lblTimerReq.Size = new System.Drawing.Size(178, 24);
             this.lblTimerReq.TabIndex = 5;
@@ -111,7 +116,7 @@
             // 
             this.txtTimerVal.Enabled = false;
             this.txtTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimerVal.Location = new System.Drawing.Point(511, 511);
+            this.txtTimerVal.Location = new System.Drawing.Point(371, 463);
             this.txtTimerVal.Name = "txtTimerVal";
             this.txtTimerVal.Size = new System.Drawing.Size(100, 32);
             this.txtTimerVal.TabIndex = 6;
@@ -119,9 +124,10 @@
             // lblTimerVal
             // 
             this.lblTimerVal.AutoSize = true;
+            this.lblTimerVal.BackColor = System.Drawing.Color.Transparent;
             this.lblTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerVal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTimerVal.Location = new System.Drawing.Point(294, 514);
+            this.lblTimerVal.ForeColor = System.Drawing.Color.Black;
+            this.lblTimerVal.Location = new System.Drawing.Point(186, 447);
             this.lblTimerVal.Name = "lblTimerVal";
             this.lblTimerVal.Size = new System.Drawing.Size(162, 48);
             this.lblTimerVal.TabIndex = 7;
@@ -131,7 +137,7 @@
             // 
             this.btnExam.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnExam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExam.Location = new System.Drawing.Point(511, 605);
+            this.btnExam.Location = new System.Drawing.Point(342, 525);
             this.btnExam.Name = "btnExam";
             this.btnExam.Size = new System.Drawing.Size(208, 44);
             this.btnExam.TabIndex = 8;
@@ -143,7 +149,7 @@
             this.lblMsg.AutoSize = true;
             this.lblMsg.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.ForeColor = System.Drawing.Color.SandyBrown;
-            this.lblMsg.Location = new System.Drawing.Point(507, 399);
+            this.lblMsg.Location = new System.Drawing.Point(399, 348);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 21);
             this.lblMsg.TabIndex = 9;
@@ -151,9 +157,10 @@
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
+            this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.lblHeading.Location = new System.Drawing.Point(507, 202);
+            this.lblHeading.ForeColor = System.Drawing.Color.Black;
+            this.lblHeading.Location = new System.Drawing.Point(399, 182);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(137, 24);
             this.lblHeading.TabIndex = 10;
@@ -174,7 +181,7 @@
             // 
             this.btnGoToQuestions.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnGoToQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoToQuestions.Location = new System.Drawing.Point(764, 605);
+            this.btnGoToQuestions.Location = new System.Drawing.Point(571, 525);
             this.btnGoToQuestions.Name = "btnGoToQuestions";
             this.btnGoToQuestions.Size = new System.Drawing.Size(208, 44);
             this.btnGoToQuestions.TabIndex = 12;
@@ -188,7 +195,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1096, 1037);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(820, 612);
             this.Controls.Add(this.btnGoToQuestions);
             this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);

@@ -57,21 +57,21 @@
     </Compile>
     <Compile Include="FrmAdminHome.Designer.cs">
       <DependentUpon>FrmAdminHome.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="FrmEditQuestions.cs">
-       <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditQuestions.Designer.cs">
-       <DependentUpon>FrmEditQuestions.cs</DependentUpon>
+      <DependentUpon>FrmEditQuestions.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGradeReport.cs">
       <SubType>Form</SubType>
-	</Compile>
+    </Compile>
     <Compile Include="FrmReport.cs">
-       <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReport.Designer.cs">
-       <DependentUpon>FrmReport.cs</DependentUpon>
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGradeReport.Designer.cs">
       <DependentUpon>FrmGradeReport.cs</DependentUpon>
@@ -111,13 +111,13 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="FrmAdminHome.resx">
       <DependentUpon>FrmAdminHome.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditQuestions.resx">
-       <DependentUpon>FrmEditQuestions.cs</DependentUpon>
+      <DependentUpon>FrmEditQuestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGradeReport.resx">
       <DependentUpon>FrmGradeReport.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReport.resx">
       <DependentUpon>FrmReport.cs</DependentUpon>
     </EmbeddedResource>

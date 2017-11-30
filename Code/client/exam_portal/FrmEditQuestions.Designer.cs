@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditQuestions));
             this.btnDeleteQuestion = new System.Windows.Forms.Button();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -121,7 +122,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 538);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(820, 594);
             this.Controls.Add(this.btnDeleteRow);
             this.Controls.Add(this.btnAddRow);
             this.Controls.Add(this.btnSubmit);
