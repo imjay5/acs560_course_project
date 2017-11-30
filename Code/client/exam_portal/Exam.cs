@@ -17,7 +17,7 @@ using Newtonsoft.Json;
 
 namespace exam_portal
 {
-    class Exam
+    public class Exam
     {
         public int exam_id;
         public string exam_title;
@@ -30,6 +30,7 @@ namespace exam_portal
         public int gradeA;
         public int gradeB;
         public int gradeC;
+		public string grade;
 
         public void examJson(Exam exam, string operation)
         {
@@ -103,6 +104,10 @@ namespace exam_portal
         public static int NoOfAverageQuestions { get; set; }
         public static int NoOfDifficultQuestions { get; set; }
         public static string Action { get; set; }
+		public static string grade { get; set; }
+        public static string name { get; set; }
+        public static int userID { get; set; }
+        public static List<Question> quesList { get; set; }
         //public static int QuestionId { get; set; }
     }
 }

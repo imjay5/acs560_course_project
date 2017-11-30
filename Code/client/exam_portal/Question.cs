@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 
 namespace exam_portal
 {
-    class Question
+    public class Question
     {
         public int exam_id;
         public int question_id;

@@ -15,7 +15,7 @@ namespace exam_portal
         public frmStartExam()
         {
             InitializeComponent();
-            textBox1.Text = (PassingQuesList.quesList.Count/2).ToString();
+            lblQuesCount.Text = (PassingValues.quesList.Count/2).ToString();
         }
 
         private void btnStartExam_Click(object sender, EventArgs e)
@@ -24,7 +24,5 @@ namespace exam_portal
             this.Hide();
             takeExam.Show();
         }
-
-        
     }
 }

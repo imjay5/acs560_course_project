@@ -21,6 +21,7 @@ namespace exam_portal
 
         Client c = new Client();
         User user = new User();
+        UTF8Encoding utf8 = new UTF8Encoding();
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -37,14 +38,15 @@ namespace exam_portal
 
             string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
             string response = c.send_data(ans, "login");
-            //MessageBox.Show(ans);
-            //MessageBox.Show(response);
-            ResponseJSON res = JsonConvert.DeserializeObject<ResponseJSON>(response);
+            User res = JsonConvert.DeserializeObject<User>(response);
+            PassingValues.name = res.name;
+            PassingValues.userID = res.user_id;
             
-
-            if (txtBoxUserName.Text.Equals(user.email) && txtBoxPwd.Text.Equals(user.password))
+            String decodedPwd = utf8.GetString(res.password);
+            
+            if (txtBoxPwd.Text == decodedPwd)
             {
-                if(res.admin_key.Equals(true) && (!(res.user_id == 0)))
+                if (res.admin_key.Equals(true) && (!(res.user_id == 0)))
                 {
                     frmAdminHome adminHome = new frmAdminHome();
                     this.Hide();
@@ -57,14 +59,18 @@ namespace exam_portal
                     this.Hide();
                     userHome.Show();
                 }
-                
-               else
+
+                else
                 {
                     MessageBox.Show("No details found. Please register");
                     return;
                 }
 
-            }
+            } else
+            {
+                MessageBox.Show("Invalid Credentials");
+                return;
+            }    
            
         }
 
@@ -75,8 +81,7 @@ namespace exam_portal
 
         private void txtBoxPwd_TextChanged(object sender, EventArgs e)
         {
-            txtBoxPwd.PasswordChar = '*';
-            user.password = txtBoxPwd.Text;
+            txtBoxPwd.PasswordChar = '*';           
         }
 
         private void linkLblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -85,18 +90,29 @@ namespace exam_portal
             this.Hide();
             registerForm.Show();
         }
-    }
 
-    public class User
-    {
-        public string email;
-        public string password;
-    }
+        public void AddExitButtons()
+        {
+            //MessageBox.Show("Trail");
+            foreach (Form frm in Application.OpenForms)
+            {
+                //MessageBox.Show("Trail2");
+                Button btn = new Button();
+                btn.BackColor = Color.Black;
+                btn.Name = "exitBtn";
+                btn.Text = "Logout";
+                btn.Size = new Size(115, 30);
+                btn.Location = new Point(588, 183);
+                btn.Click += new EventHandler(this.exitBtn_Click);
+                frm.Controls.Add(btn);
+            }
+            //MessageBox.Show("Trail3");
+        }
 
-    public class ResponseJSON
-    {
-        public string msg;
-        public int user_id;
-        public bool admin_key;
+        public void exitBtn_Click(Object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

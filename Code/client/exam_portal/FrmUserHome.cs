@@ -16,15 +16,19 @@ namespace exam_portal
         public frmUserHome()
         {
             InitializeComponent();
+            lblUserName.Text = PassingValues.name + ",";
+
+            frmLogin frm = new frmLogin();
+            frm.AddExitButtons();
+            
         }
 
         Client c = new Client();
-        //ExamDetails exam = new ExamDetails();
+        Question ques = new Question();
 
-        public List<Response1> resList;
-        public List<QuestionList> questionList;
-
-
+        public List<Exam> examList;
+        public List<Question> questionList;
+        
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -36,81 +40,122 @@ namespace exam_portal
 
         private void btnSeeAvlExams_Click(object sender, EventArgs e)
         {
-            //frmTakeExam takeExamForm = new frmTakeExam();
-            //this.Hide();
-            //takeExamForm.Show();
+            User user = new User();
+            user.user_id = PassingValues.userID;
+            string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
+            string response = c.send_data(ans, "selectExam");
+            examList = JsonConvert.DeserializeObject<List<Exam>>(response);
 
-            //string ans = JsonConvert.SerializeObject(exam, Formatting.Indented);
-            string response = c.send_data(null, "selectExam");
-            //MessageBox.Show(ans);
-            MessageBox.Show(response);
-            //var examSet = JsonConvert.DeserializeObject<Wrapper>(response).ExamSet;
-            resList = JsonConvert.DeserializeObject<List<Response1>>(response);
-            //MessageBox.Show(res.msg);
-
-            for(int i=0; i<resList.Count();i++){ 
+            for(int i=0; i< examList.Count();i++){ 
                 Label lbl = new Label();
-                lbl.Text = resList[i].exam_id.ToString();
+                lbl.Text = examList[i].exam_id.ToString();
                 lbl.ForeColor = Color.White;
-                lbl.Location = new Point(100, 200 + (50 * i));
+                lbl.Size = new Size(30, 23);
+                lbl.BackColor = Color.Orange;
+                lbl.Location = new Point(100, 320 + (25 * i));
+                lbl.Font = new Font("Consolas", 10, FontStyle.Regular);
                 this.Controls.Add(lbl);
                 lbl.BringToFront();
 
                 Label lbl2 = new Label();
-                lbl2.Text = resList[i].exam_title;
+                lbl2.Text = examList[i].exam_title;
+                lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
                 lbl2.ForeColor = Color.White;
-                lbl2.Location = new Point(250, 200 + (50 * i));
+                lbl2.BackColor = Color.Orange;
+                lbl2.Size = new Size(180, 23);
+                lbl2.Location = new Point(150, 320 + (25 * i));
+                lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
                 this.Controls.Add(lbl2);
                 lbl2.BringToFront();
 
-                /*Button btn = new Button();
+                Button btn = new Button();
                 btn.Text = "Take Exam";
-                btn.BackColor = Color.DarkKhaki;
+                btn.Name = examList[i].exam_id.ToString();
+                btn.BackColor = Color.AliceBlue;
+                btn.Font = new Font("Arial", 10, FontStyle.Regular);
                 btn.ForeColor = Color.Black;
-                btn.Location = new Point(400, 200 + (50 * i));
+                btn.Size = new Size(90, 23);
+                btn.Location = new Point(300, 320 + (25 * i));
                 this.Controls.Add(btn);
                 btn.BringToFront();
-                btn.Click += new EventHandler(btn_Click);*/
+                btn.Click += new EventHandler(button_Click);
                 
-            }
+            }            
         }
 
-        private void btnTakeExam_Click(object sender, EventArgs e)
+        protected void button_Click(object sender, EventArgs e)
         {
-            string response = c.send_data(null, "takeExam");            
-            MessageBox.Show(response);            
-            questionList = JsonConvert.DeserializeObject<List<QuestionList>>(response);
-            PassingQuesList.quesList = questionList;
+            Button button = sender as Button;
+            Exam exam = new Exam();
+            exam.exam_id = Int32.Parse(button.Name);
+            //MessageBox.Show(exam.exam_id.ToString());
+
+            string ans = JsonConvert.SerializeObject(exam, Formatting.Indented);
+            string response = c.send_data(ans, "takeExam");
+            //MessageBox.Show(response);
+            questionList = JsonConvert.DeserializeObject<List<Question>>(response);
+            PassingValues.quesList = questionList;
+            PassingValues.ExamId = exam.exam_id;
 
             frmStartExam startExam = new frmStartExam();
             this.Hide();
             startExam.Show();
         }
+
+        private void btnTakenExams_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.user_id = PassingValues.userID;
+            string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
+            string response = c.send_data(ans, "takenExams");
+            //MessageBox.Show(response);
+            try
+            {
+                examList = JsonConvert.DeserializeObject<List<Exam>>(response);
+
+                for (int i = 0; i < examList.Count(); i++)
+                {
+                    Label lbl = new Label();
+                    lbl.Text = examList[i].exam_id.ToString();
+                    lbl.ForeColor = Color.White;
+                    lbl.BackColor = Color.Orange;
+                    lbl.Size = new Size(30, 23);
+                    lbl.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lbl.Location = new Point(450, 320 + (25 * i));
+                    this.Controls.Add(lbl);
+                    lbl.BringToFront();
+
+                    Label lbl2 = new Label();
+                    lbl2.Text = examList[i].exam_title;
+                    lbl2.ForeColor = Color.White;
+                    lbl2.BackColor = Color.Orange;
+                    lbl2.Size = new Size(180, 23);
+                    lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lbl2.Location = new Point(500, 320 + (25 * i));
+                    this.Controls.Add(lbl2);
+                    lbl2.BringToFront();
+
+                    Label lbl3 = new Label();
+                    lbl3.Text = examList[i].grade;
+                    lbl3.ForeColor = Color.White;
+                    lbl3.BackColor = Color.Orange;
+                    lbl3.Size = new Size(30, 23);
+                    lbl3.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lbl3.Location = new Point(700, 320 + (25 * i));
+                    this.Controls.Add(lbl3);
+                    lbl3.BringToFront();
+                }
+            }
+            catch(Exception)
+            {
+                
+                MessageBox.Show("You haven't taken any exams yet");
+            }
+
+            
+        }       
     }
+    
 
-
-    public class Response1
-    {
-        public int exam_id;
-        public string exam_title;        
-    }
-
-    public class QuestionList
-    {
-        public int question_id;
-        public string question;
-        public string option_a;
-        public string option_b;
-        public string option_c;
-        public string option_d;
-        public string answer;
-        public string difficulty_level;
-
-    }
-
-    public static class PassingQuesList
-    {
-        public static List<QuestionList> quesList { get; set; }
-
-    }
-    }
+    
+}

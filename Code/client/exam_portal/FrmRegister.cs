@@ -19,12 +19,14 @@ namespace exam_portal
             InitializeComponent();
         }
 
-        UserDetails user = new UserDetails();
+        User user = new User();
         Client c = new Client();
         Regex regexDigit = new Regex(@"(?=.*\d)");
         Regex regexUpperCase = new Regex(@"(?=.*[A-Z])");
         Regex regexSpecial = new Regex(@"(?=.*\W)");
         Regex regexEmail = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+        UTF8Encoding utf8 = new UTF8Encoding();
 
         private void lblPwd_Click(object sender, EventArgs e)
         {
@@ -44,7 +46,8 @@ namespace exam_portal
         private void txtBoxPwd_TextChanged(object sender, EventArgs e)
         {
             txtBoxPwd.PasswordChar = '*';
-            user.password = txtBoxPwd.Text;
+            //user.password = txtBoxPwd.Text;
+            user.password = utf8.GetBytes(txtBoxPwd.Text);
         }
 
         private void txtBoxRPwd_TextChanged(object sender, EventArgs e)
@@ -112,20 +115,17 @@ namespace exam_portal
             string response = c.send_data(ans, "register");
             //MessageBox.Show(ans);
             //MessageBox.Show(response);
-            ResponseJSON res = JsonConvert.DeserializeObject<ResponseJSON>(response);
+            User res = JsonConvert.DeserializeObject<User>(response);
             //MessageBox.Show(res.msg);
+            PassingValues.name = user.name;
+            
 
             if (res.msg.Equals("success"))
             {
-                MessageBox.Show("Registration Successful!");
-
-                if (res.admin_key.Equals(false))
-                {
-                    frmUserHome userHome = new frmUserHome();
-                    this.Hide();
-                    userHome.Show();
-                }
-
+                MessageBox.Show("Registration Successful. Login Now..!!");
+                frmLogin loginForm = new frmLogin();
+                this.Hide();
+                loginForm.Show();
             }
             else
             {
@@ -141,17 +141,5 @@ namespace exam_portal
             loginForm.Show();
         }
     }
-
-    public class UserDetails
-    {
-        public string name;
-        public string email;
-        public string password;
-    }
-    public class Response
-    {
-        public string msg;
-    }
-
     
 }

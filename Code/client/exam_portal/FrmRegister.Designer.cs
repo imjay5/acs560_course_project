@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.lblName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPwd = new System.Windows.Forms.Label();
@@ -37,18 +38,16 @@
             this.txtBoxPwd = new System.Windows.Forms.TextBox();
             this.txtBoxRPwd = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.lblTop = new System.Windows.Forms.Label();
-            this.lblHeading = new System.Windows.Forms.Label();
             this.linkLblLogin = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Black;
+            this.lblName.BackColor = System.Drawing.Color.Orange;
             this.lblName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblName.Location = new System.Drawing.Point(235, 191);
+            this.lblName.Location = new System.Drawing.Point(227, 191);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(65, 23);
             this.lblName.TabIndex = 6;
@@ -57,10 +56,10 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.BackColor = System.Drawing.Color.Black;
+            this.lblEmail.BackColor = System.Drawing.Color.Orange;
             this.lblEmail.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(235, 246);
+            this.lblEmail.Location = new System.Drawing.Point(227, 246);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(63, 23);
             this.lblEmail.TabIndex = 7;
@@ -69,10 +68,10 @@
             // lblPwd
             // 
             this.lblPwd.AutoSize = true;
-            this.lblPwd.BackColor = System.Drawing.Color.Black;
+            this.lblPwd.BackColor = System.Drawing.Color.Orange;
             this.lblPwd.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPwd.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPwd.Location = new System.Drawing.Point(235, 304);
+            this.lblPwd.Location = new System.Drawing.Point(227, 304);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(159, 23);
             this.lblPwd.TabIndex = 8;
@@ -82,10 +81,10 @@
             // lblRPwd
             // 
             this.lblRPwd.AutoSize = true;
-            this.lblRPwd.BackColor = System.Drawing.Color.Black;
+            this.lblRPwd.BackColor = System.Drawing.Color.Orange;
             this.lblRPwd.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRPwd.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRPwd.Location = new System.Drawing.Point(235, 355);
+            this.lblRPwd.Location = new System.Drawing.Point(227, 355);
             this.lblRPwd.Name = "lblRPwd";
             this.lblRPwd.Size = new System.Drawing.Size(184, 23);
             this.lblRPwd.TabIndex = 9;
@@ -94,7 +93,7 @@
             // txtBoxName
             // 
             this.txtBoxName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxName.Location = new System.Drawing.Point(455, 191);
+            this.txtBoxName.Location = new System.Drawing.Point(447, 191);
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(159, 27);
             this.txtBoxName.TabIndex = 10;
@@ -103,7 +102,7 @@
             // txtBoxEmail
             // 
             this.txtBoxEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(455, 246);
+            this.txtBoxEmail.Location = new System.Drawing.Point(447, 246);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(159, 27);
             this.txtBoxEmail.TabIndex = 11;
@@ -112,7 +111,7 @@
             // txtBoxPwd
             // 
             this.txtBoxPwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPwd.Location = new System.Drawing.Point(455, 300);
+            this.txtBoxPwd.Location = new System.Drawing.Point(447, 300);
             this.txtBoxPwd.Name = "txtBoxPwd";
             this.txtBoxPwd.Size = new System.Drawing.Size(159, 27);
             this.txtBoxPwd.TabIndex = 12;
@@ -121,7 +120,7 @@
             // txtBoxRPwd
             // 
             this.txtBoxRPwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxRPwd.Location = new System.Drawing.Point(455, 351);
+            this.txtBoxRPwd.Location = new System.Drawing.Point(447, 351);
             this.txtBoxRPwd.Name = "txtBoxRPwd";
             this.txtBoxRPwd.Size = new System.Drawing.Size(159, 27);
             this.txtBoxRPwd.TabIndex = 13;
@@ -129,9 +128,9 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnRegister.BackColor = System.Drawing.Color.Thistle;
             this.btnRegister.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(398, 440);
+            this.btnRegister.Location = new System.Drawing.Point(390, 440);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 32);
             this.btnRegister.TabIndex = 14;
@@ -139,35 +138,12 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // lblTop
-            // 
-            this.lblTop.AutoSize = true;
-            this.lblTop.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop.ForeColor = System.Drawing.Color.GreenYellow;
-            this.lblTop.Location = new System.Drawing.Point(341, 40);
-            this.lblTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(146, 27);
-            this.lblTop.TabIndex = 15;
-            this.lblTop.Text = "Exam Portal";
-            // 
-            // lblHeading
-            // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.lblHeading.Location = new System.Drawing.Point(367, 104);
-            this.lblHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(78, 19);
-            this.lblHeading.TabIndex = 16;
-            this.lblHeading.Text = "Register";
-            // 
             // linkLblLogin
             // 
             this.linkLblLogin.AutoSize = true;
+            this.linkLblLogin.BackColor = System.Drawing.Color.LightCyan;
             this.linkLblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblLogin.Location = new System.Drawing.Point(355, 512);
+            this.linkLblLogin.Location = new System.Drawing.Point(347, 512);
             this.linkLblLogin.Name = "linkLblLogin";
             this.linkLblLogin.Size = new System.Drawing.Size(201, 16);
             this.linkLblLogin.TabIndex = 17;
@@ -180,11 +156,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(822, 602);
             this.Controls.Add(this.linkLblLogin);
-            this.Controls.Add(this.lblHeading);
-            this.Controls.Add(this.lblTop);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtBoxRPwd);
             this.Controls.Add(this.txtBoxPwd);
@@ -213,8 +188,6 @@
         private System.Windows.Forms.TextBox txtBoxPwd;
         private System.Windows.Forms.TextBox txtBoxRPwd;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label lblTop;
-        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.LinkLabel linkLblLogin;
     }
 }

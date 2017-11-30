@@ -15,9 +15,22 @@ namespace exam_portal
         public frmGradeReport()
         {
             InitializeComponent();
-            int score = GradeScore.averageCount * 2 + GradeScore.difficultCount * 4;
-            txtBoxScore.Text = score.ToString();
-            
+
+            lblGrade.Text = PassingValues.grade;
+
+            if(lblGrade.Text == "D" || lblGrade.Text == "C")
+            {
+                lblMsg.Text = "Study hard..!!";
+            }
+
+        }
+
+        private void btnGoHome_Click(object sender, EventArgs e)
+        {
+            frmUserHome frm = new frmUserHome();
+            this.Hide();
+            frm.Show();
         }
     }
+    
 }
