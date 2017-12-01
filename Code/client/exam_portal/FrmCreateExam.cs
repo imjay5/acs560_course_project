@@ -123,6 +123,14 @@ namespace exam_portal
                     return false;
                 }
             }
+            if (chkBxTimer.Checked == true)
+            {
+                if (txtTimerVal.Text == string.Empty)
+                {
+                    MessageBox.Show("Please enter timer value");
+                    return false;
+                }
+            }
             return true;
         }
         

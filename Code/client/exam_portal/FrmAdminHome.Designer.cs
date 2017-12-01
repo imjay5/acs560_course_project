@@ -38,9 +38,12 @@
             // btnCreateExam
             // 
             this.btnCreateExam.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnCreateExam.Location = new System.Drawing.Point(175, 13);
+            this.btnCreateExam.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnCreateExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateExam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateExam.Location = new System.Drawing.Point(357, 3);
             this.btnCreateExam.Name = "btnCreateExam";
-            this.btnCreateExam.Size = new System.Drawing.Size(179, 42);
+            this.btnCreateExam.Size = new System.Drawing.Size(129, 28);
             this.btnCreateExam.TabIndex = 0;
             this.btnCreateExam.Text = "Create Exam";
             this.btnCreateExam.UseVisualStyleBackColor = false;
@@ -60,9 +63,12 @@
             // btnReport
             // 
             this.btnReport.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnReport.Location = new System.Drawing.Point(360, 13);
+            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(502, 3);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(179, 42);
+            this.btnReport.Size = new System.Drawing.Size(133, 28);
             this.btnReport.TabIndex = 21;
             this.btnReport.Text = "View Report";
             this.btnReport.UseVisualStyleBackColor = false;

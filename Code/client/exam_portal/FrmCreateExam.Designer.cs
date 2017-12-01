@@ -40,7 +40,6 @@
             this.btnExam = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
             this.lblHeading = new System.Windows.Forms.Label();
-            this.lblTop = new System.Windows.Forms.Label();
             this.btnGoToQuestions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -48,11 +47,11 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Black;
             this.lblTitle.Location = new System.Drawing.Point(186, 253);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(115, 24);
+            this.lblTitle.Size = new System.Drawing.Size(105, 24);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Exam Title";
             // 
@@ -68,11 +67,11 @@
             // 
             this.lblQuestions.AutoSize = true;
             this.lblQuestions.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestions.ForeColor = System.Drawing.Color.Black;
             this.lblQuestions.Location = new System.Drawing.Point(186, 313);
             this.lblQuestions.Name = "lblQuestions";
-            this.lblQuestions.Size = new System.Drawing.Size(109, 48);
+            this.lblQuestions.Size = new System.Drawing.Size(98, 48);
             this.lblQuestions.TabIndex = 2;
             this.lblQuestions.Text = "No of \r\nQuestions";
             // 
@@ -104,11 +103,11 @@
             // 
             this.lblTimerReq.AutoSize = true;
             this.lblTimerReq.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimerReq.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerReq.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerReq.ForeColor = System.Drawing.Color.Black;
             this.lblTimerReq.Location = new System.Drawing.Point(186, 391);
             this.lblTimerReq.Name = "lblTimerReq";
-            this.lblTimerReq.Size = new System.Drawing.Size(178, 24);
+            this.lblTimerReq.Size = new System.Drawing.Size(156, 24);
             this.lblTimerReq.TabIndex = 5;
             this.lblTimerReq.Text = "Timer Required?";
             // 
@@ -125,17 +124,19 @@
             // 
             this.lblTimerVal.AutoSize = true;
             this.lblTimerVal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerVal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerVal.ForeColor = System.Drawing.Color.Black;
             this.lblTimerVal.Location = new System.Drawing.Point(186, 447);
             this.lblTimerVal.Name = "lblTimerVal";
-            this.lblTimerVal.Size = new System.Drawing.Size(162, 48);
+            this.lblTimerVal.Size = new System.Drawing.Size(145, 48);
             this.lblTimerVal.TabIndex = 7;
             this.lblTimerVal.Text = "Timer Duration\r\n(in minutes)\r\n";
             // 
             // btnExam
             // 
-            this.btnExam.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnExam.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnExam.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnExam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExam.Location = new System.Drawing.Point(342, 525);
             this.btnExam.Name = "btnExam";
@@ -147,9 +148,10 @@
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
+            this.lblMsg.BackColor = System.Drawing.Color.Transparent;
             this.lblMsg.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.ForeColor = System.Drawing.Color.SandyBrown;
-            this.lblMsg.Location = new System.Drawing.Point(399, 348);
+            this.lblMsg.Location = new System.Drawing.Point(367, 348);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(0, 21);
             this.lblMsg.TabIndex = 9;
@@ -160,26 +162,17 @@
             this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.ForeColor = System.Drawing.Color.Black;
-            this.lblHeading.Location = new System.Drawing.Point(399, 182);
+            this.lblHeading.Location = new System.Drawing.Point(367, 188);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(137, 24);
             this.lblHeading.TabIndex = 10;
             this.lblHeading.Text = "Create Exam";
             // 
-            // lblTop
-            // 
-            this.lblTop.AutoSize = true;
-            this.lblTop.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop.ForeColor = System.Drawing.Color.GreenYellow;
-            this.lblTop.Location = new System.Drawing.Point(473, 49);
-            this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(185, 34);
-            this.lblTop.TabIndex = 11;
-            this.lblTop.Text = "Exam Portal";
-            // 
             // btnGoToQuestions
             // 
-            this.btnGoToQuestions.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnGoToQuestions.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnGoToQuestions.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnGoToQuestions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoToQuestions.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoToQuestions.Location = new System.Drawing.Point(571, 525);
             this.btnGoToQuestions.Name = "btnGoToQuestions";
@@ -198,7 +191,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(820, 612);
             this.Controls.Add(this.btnGoToQuestions);
-            this.Controls.Add(this.lblTop);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnExam);
@@ -232,7 +224,6 @@
         private System.Windows.Forms.Button btnExam;
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.Label lblHeading;
-        private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Button btnGoToQuestions;
     }
 }

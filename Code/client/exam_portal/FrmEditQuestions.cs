@@ -60,11 +60,15 @@ namespace exam_portal
             }
             
             DataTable dataTable = ConvertToDataTable(questionList);
-            dg.AutoGenerateColumns = false;  
+            dg.AutoGenerateColumns = false;
+            dg.EnableHeadersVisualStyles = false;
+            dg.ColumnHeadersDefaultCellStyle.BackColor = Color.Orange;
+            dg.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas",10,FontStyle.Bold);
 
             DataGridViewTextBoxColumn dgtxtBoxQuestion = new DataGridViewTextBoxColumn();
             dgtxtBoxQuestion.DataPropertyName = "Question";
             dgtxtBoxQuestion.HeaderText = "Question";
+            
             dg.Columns.Add(dgtxtBoxQuestion);
 
             DataGridViewTextBoxColumn dgtxtBoxOptionA = new DataGridViewTextBoxColumn();
