@@ -29,52 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserHome));
-            this.btnTakenExams = new System.Windows.Forms.Button();
-            this.btnSeeAvlExams = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHello = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.lblAvlExams = new System.Windows.Forms.Label();
+            this.lblExamsTaken = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnTakenExams
+            // lblHello
             // 
-            this.btnTakenExams.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnTakenExams.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakenExams.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTakenExams.Location = new System.Drawing.Point(493, 270);
-            this.btnTakenExams.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTakenExams.Name = "btnTakenExams";
-            this.btnTakenExams.Size = new System.Drawing.Size(201, 30);
-            this.btnTakenExams.TabIndex = 45;
-            this.btnTakenExams.Text = "See all Taken Exams";
-            this.btnTakenExams.UseVisualStyleBackColor = false;
-            this.btnTakenExams.Click += new System.EventHandler(this.btnTakenExams_Click);
-            // 
-            // btnSeeAvlExams
-            // 
-            this.btnSeeAvlExams.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnSeeAvlExams.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeeAvlExams.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSeeAvlExams.Location = new System.Drawing.Point(138, 270);
-            this.btnSeeAvlExams.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSeeAvlExams.Name = "btnSeeAvlExams";
-            this.btnSeeAvlExams.Size = new System.Drawing.Size(241, 30);
-            this.btnSeeAvlExams.TabIndex = 42;
-            this.btnSeeAvlExams.Text = "See all Available Exams";
-            this.btnSeeAvlExams.UseVisualStyleBackColor = false;
-            this.btnSeeAvlExams.Click += new System.EventHandler(this.btnSeeAvlExams_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(134, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hello";
+            this.lblHello.AutoSize = true;
+            this.lblHello.BackColor = System.Drawing.Color.Transparent;
+            this.lblHello.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.ForeColor = System.Drawing.Color.Black;
+            this.lblHello.Location = new System.Drawing.Point(134, 185);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(60, 23);
+            this.lblHello.TabIndex = 0;
+            this.lblHello.Text = "Hello";
             // 
             // lblName
             // 
@@ -98,6 +71,44 @@
             this.lblUserName.Size = new System.Drawing.Size(0, 23);
             this.lblUserName.TabIndex = 46;
             // 
+            // lblAvlExams
+            // 
+            this.lblAvlExams.AutoSize = true;
+            this.lblAvlExams.BackColor = System.Drawing.Color.Transparent;
+            this.lblAvlExams.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvlExams.ForeColor = System.Drawing.Color.Red;
+            this.lblAvlExams.Location = new System.Drawing.Point(168, 240);
+            this.lblAvlExams.Name = "lblAvlExams";
+            this.lblAvlExams.Size = new System.Drawing.Size(152, 24);
+            this.lblAvlExams.TabIndex = 47;
+            this.lblAvlExams.Text = "Available Exams";
+            // 
+            // lblExamsTaken
+            // 
+            this.lblExamsTaken.AutoSize = true;
+            this.lblExamsTaken.BackColor = System.Drawing.Color.Transparent;
+            this.lblExamsTaken.Font = new System.Drawing.Font("Tempus Sans ITC", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExamsTaken.ForeColor = System.Drawing.Color.Red;
+            this.lblExamsTaken.Location = new System.Drawing.Point(509, 240);
+            this.lblExamsTaken.Name = "lblExamsTaken";
+            this.lblExamsTaken.Size = new System.Drawing.Size(120, 24);
+            this.lblExamsTaken.TabIndex = 48;
+            this.lblExamsTaken.Text = "Exams taken";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Thistle;
+            this.btnLogOut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogOut.Location = new System.Drawing.Point(573, 182);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(115, 30);
+            this.btnLogOut.TabIndex = 49;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // frmUserHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,25 +116,27 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(822, 602);
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.lblExamsTaken);
+            this.Controls.Add(this.lblAvlExams);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.btnTakenExams);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.btnSeeAvlExams);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHello);
             this.Name = "frmUserHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Home";
+            this.Load += new System.EventHandler(this.frmUserHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTakenExams;
-        private System.Windows.Forms.Button btnSeeAvlExams;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblAvlExams;
+        private System.Windows.Forms.Label lblExamsTaken;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

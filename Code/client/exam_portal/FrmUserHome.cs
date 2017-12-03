@@ -17,10 +17,6 @@ namespace exam_portal
         {
             InitializeComponent();
             lblUserName.Text = PassingValues.name + ",";
-
-            frmLogin frm = new frmLogin();
-            frm.AddExitButtons();
-            
         }
 
         Client c = new Client();
@@ -28,134 +24,204 @@ namespace exam_portal
 
         public List<Exam> examList;
         public List<Question> questionList;
-        
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void frmUserHome_Load(object sender, EventArgs e)
         {
-            frmLogin loginForm = new frmLogin();
-            this.Hide();
-            loginForm.Show();
-            Application.Exit();
+            seeAvlExams();
+            seeTakenExams();
         }
 
-        private void btnSeeAvlExams_Click(object sender, EventArgs e)
+        private void seeAvlExams()
         {
             User user = new User();
             user.user_id = PassingValues.userID;
             string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
             string response = c.send_data(ans, "selectExam");
-            examList = JsonConvert.DeserializeObject<List<Exam>>(response);
 
-            for(int i=0; i< examList.Count();i++){ 
-                Label lbl = new Label();
-                lbl.Text = examList[i].exam_id.ToString();
-                lbl.ForeColor = Color.White;
-                lbl.Size = new Size(30, 23);
-                lbl.BackColor = Color.Orange;
-                lbl.Location = new Point(100, 320 + (25 * i));
-                lbl.Font = new Font("Consolas", 10, FontStyle.Regular);
-                this.Controls.Add(lbl);
-                lbl.BringToFront();
+            try
+            {
+                examList = JsonConvert.DeserializeObject<List<Exam>>(response);
 
-                Label lbl2 = new Label();
-                lbl2.Text = examList[i].exam_title;
-                lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
-                lbl2.ForeColor = Color.White;
-                lbl2.BackColor = Color.Orange;
-                lbl2.Size = new Size(180, 23);
-                lbl2.Location = new Point(150, 320 + (25 * i));
-                lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
-                this.Controls.Add(lbl2);
-                lbl2.BringToFront();
+                Label lblEx = new Label();
+                lblEx.Text = "#";
+                lblEx.ForeColor = Color.Black;
+                lblEx.BackColor = Color.Transparent;
+                lblEx.Size = new Size(30, 23);
+                lblEx.Location = new Point(100, 285);
+                lblEx.Font = new Font("Consolas", 10, FontStyle.Underline);
+                this.Controls.Add(lblEx);
+                lblEx.BringToFront();
 
-                Button btn = new Button();
-                btn.Text = "Take Exam";
-                btn.Name = examList[i].exam_id.ToString();
-                btn.BackColor = Color.AliceBlue;
-                btn.Font = new Font("Arial", 10, FontStyle.Regular);
-                btn.ForeColor = Color.Black;
-                btn.Size = new Size(90, 23);
-                btn.Location = new Point(300, 320 + (25 * i));
-                this.Controls.Add(btn);
-                btn.BringToFront();
-                btn.Click += new EventHandler(button_Click);
-                
-            }            
+                Label lblTitle = new Label();
+                lblTitle.Text = "Exam Title";
+                lblTitle.ForeColor = Color.Black;
+                lblTitle.BackColor = Color.Transparent;
+                lblTitle.Size = new Size(180, 23);
+                lblTitle.Location = new Point(150, 285);
+                lblTitle.Font = new Font("Consolas", 10, FontStyle.Underline);
+                this.Controls.Add(lblTitle);
+                lblTitle.BringToFront();
+
+                for (int i = 0; i < examList.Count(); i++)
+                {
+                    Label lblExamID = new Label();
+                    lblExamID.Text = (i + 1).ToString();
+                    lblExamID.ForeColor = Color.Black;
+                    lblExamID.BackColor = Color.Transparent;
+                    lblExamID.Size = new Size(30, 23);
+                    lblExamID.Location = new Point(100, 320 + (25 * i));
+                    lblExamID.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    this.Controls.Add(lblExamID);
+                    lblExamID.BringToFront();
+
+                    Label lblExamTitle = new Label();
+                    lblExamTitle.Text = examList[i].exam_title;
+                    lblExamTitle.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lblExamTitle.ForeColor = Color.Black;
+                    lblExamTitle.BackColor = Color.Transparent;
+                    lblExamTitle.Size = new Size(180, 23);
+                    lblExamTitle.Location = new Point(150, 320 + (25 * i));
+                    lblExamTitle.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    this.Controls.Add(lblExamTitle);
+                    lblExamTitle.BringToFront();
+
+                    Button btnTakeExam = new Button();
+                    btnTakeExam.Text = "Take Exam";
+                    btnTakeExam.Name = examList[i].exam_id.ToString();
+                    btnTakeExam.BackColor = Color.AliceBlue;
+                    btnTakeExam.Font = new Font("Arial", 10, FontStyle.Regular);
+                    btnTakeExam.ForeColor = Color.Black;
+                    btnTakeExam.Size = new Size(90, 23);
+                    btnTakeExam.Location = new Point(300, 320 + (25 * i));
+                    this.Controls.Add(btnTakeExam);
+                    btnTakeExam.BringToFront();
+                    btnTakeExam.Click += new EventHandler(btnTakeExam_Click);
+
+                }
+            }
+            catch (Exception)
+            {
+                Label lblMsg = new Label();
+                lblMsg.Text = "There are no available exams at the moment..!!";
+                lblMsg.ForeColor = Color.Black;
+                lblMsg.BackColor = Color.Transparent;
+                lblMsg.Size = new Size(500, 23);
+                lblMsg.Location = new Point(100, 285);
+                lblMsg.Font = new Font("Consolas", 8, FontStyle.Italic);
+                this.Controls.Add(lblMsg);
+                lblMsg.BringToFront();
+            }
         }
 
-        protected void button_Click(object sender, EventArgs e)
+        protected void btnTakeExam_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
             Exam exam = new Exam();
             exam.exam_id = Int32.Parse(button.Name);
-            //MessageBox.Show(exam.exam_id.ToString());
-
             string ans = JsonConvert.SerializeObject(exam, Formatting.Indented);
             string response = c.send_data(ans, "takeExam");
-            //MessageBox.Show(response);
             questionList = JsonConvert.DeserializeObject<List<Question>>(response);
             PassingValues.quesList = questionList;
             PassingValues.ExamId = exam.exam_id;
-
             frmStartExam startExam = new frmStartExam();
             this.Hide();
             startExam.Show();
         }
 
-        private void btnTakenExams_Click(object sender, EventArgs e)
+        private void seeTakenExams()
         {
             User user = new User();
             user.user_id = PassingValues.userID;
             string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
             string response = c.send_data(ans, "takenExams");
-            //MessageBox.Show(response);
             try
             {
                 examList = JsonConvert.DeserializeObject<List<Exam>>(response);
 
+                Label lblEx = new Label();
+                lblEx.Text = "#";
+                lblEx.ForeColor = Color.Black;
+                lblEx.BackColor = Color.Transparent;
+                lblEx.Size = new Size(30, 23);
+                lblEx.Location = new Point(450, 285);
+                lblEx.Font = new Font("Consolas", 10, FontStyle.Underline);
+                this.Controls.Add(lblEx);
+                lblEx.BringToFront();
+
+                Label lblTitle = new Label();
+                lblTitle.Text = "Exam Title";
+                lblTitle.ForeColor = Color.Black;
+                lblTitle.BackColor = Color.Transparent;
+                lblTitle.Size = new Size(180, 23);
+                lblTitle.Location = new Point(500, 285);
+                lblTitle.Font = new Font("Consolas", 10, FontStyle.Underline);
+                this.Controls.Add(lblTitle);
+                lblTitle.BringToFront();
+
+                Label lblGrd = new Label();
+                lblGrd.Text = "Grade";
+                lblGrd.ForeColor = Color.Black;
+                lblGrd.BackColor = Color.Transparent;
+                lblGrd.Size = new Size(100, 23);
+                lblGrd.Location = new Point(682, 285);
+                lblGrd.Font = new Font("Consolas", 10, FontStyle.Underline);
+                this.Controls.Add(lblGrd);
+                lblGrd.BringToFront();
+
+
                 for (int i = 0; i < examList.Count(); i++)
                 {
-                    Label lbl = new Label();
-                    lbl.Text = examList[i].exam_id.ToString();
-                    lbl.ForeColor = Color.White;
-                    lbl.BackColor = Color.Orange;
-                    lbl.Size = new Size(30, 23);
-                    lbl.Font = new Font("Consolas", 10, FontStyle.Regular);
-                    lbl.Location = new Point(450, 320 + (25 * i));
-                    this.Controls.Add(lbl);
-                    lbl.BringToFront();
+                    Label lblExamID = new Label();
+                    lblExamID.Text = (i + 1).ToString();
+                    lblExamID.ForeColor = Color.Black;
+                    lblExamID.BackColor = Color.Transparent;
+                    lblExamID.Size = new Size(30, 23);
+                    lblExamID.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lblExamID.Location = new Point(450, 320 + (25 * i));
+                    this.Controls.Add(lblExamID);
+                    lblExamID.BringToFront();
 
-                    Label lbl2 = new Label();
-                    lbl2.Text = examList[i].exam_title;
-                    lbl2.ForeColor = Color.White;
-                    lbl2.BackColor = Color.Orange;
-                    lbl2.Size = new Size(180, 23);
-                    lbl2.Font = new Font("Consolas", 10, FontStyle.Regular);
-                    lbl2.Location = new Point(500, 320 + (25 * i));
-                    this.Controls.Add(lbl2);
-                    lbl2.BringToFront();
+                    Label lblExamTitle = new Label();
+                    lblExamTitle.Text = examList[i].exam_title;
+                    lblExamTitle.ForeColor = Color.Black;
+                    lblExamTitle.BackColor = Color.Transparent;
+                    lblExamTitle.Size = new Size(180, 23);
+                    lblExamTitle.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lblExamTitle.Location = new Point(500, 320 + (25 * i));
+                    this.Controls.Add(lblExamTitle);
+                    lblExamTitle.BringToFront();
 
-                    Label lbl3 = new Label();
-                    lbl3.Text = examList[i].grade;
-                    lbl3.ForeColor = Color.White;
-                    lbl3.BackColor = Color.Orange;
-                    lbl3.Size = new Size(30, 23);
-                    lbl3.Font = new Font("Consolas", 10, FontStyle.Regular);
-                    lbl3.Location = new Point(700, 320 + (25 * i));
-                    this.Controls.Add(lbl3);
-                    lbl3.BringToFront();
+                    Label lblGrade = new Label();
+                    lblGrade.Text = examList[i].grade;
+                    lblGrade.ForeColor = Color.Black;
+                    lblGrade.BackColor = Color.Transparent;
+                    lblGrade.Size = new Size(30, 23);
+                    lblGrade.Font = new Font("Consolas", 10, FontStyle.Regular);
+                    lblGrade.Location = new Point(700, 320 + (25 * i));
+                    this.Controls.Add(lblGrade);
+                    lblGrade.BringToFront();
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
-                
-                MessageBox.Show("You haven't taken any exams yet");
+                Label lblMsg = new Label();
+                lblMsg.Text = "You haven't taken any exams yet..!!";
+                lblMsg.ForeColor = Color.Black;
+                lblMsg.BackColor = Color.Transparent;
+                lblMsg.Size = new Size(250, 23);
+                lblMsg.Location = new Point(450, 285);
+                lblMsg.Font = new Font("Consolas", 8, FontStyle.Italic);
+                this.Controls.Add(lblMsg);
+                lblMsg.BringToFront();
             }
+        }
 
-            
-        }       
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            this.Hide();
+            frm.Show();
+        }
     }
-    
 
-    
 }

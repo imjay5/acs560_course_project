@@ -27,6 +27,7 @@ namespace exam_portal
         Regex regexEmail = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
 
         UTF8Encoding utf8 = new UTF8Encoding();
+        
 
         private void lblPwd_Click(object sender, EventArgs e)
         {
@@ -55,6 +56,7 @@ namespace exam_portal
             txtBoxRPwd.PasswordChar = '*';
         }
 
+       
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (txtBoxName.Text.Equals(""))
@@ -110,6 +112,7 @@ namespace exam_portal
                 MessageBox.Show("Password doesn't match");
                 return;
             }
+            
 
             string ans = JsonConvert.SerializeObject(user, Formatting.Indented);
             string response = c.send_data(ans, "register");
@@ -140,6 +143,7 @@ namespace exam_portal
             this.Hide();
             loginForm.Show();
         }
+        
     }
     
 }

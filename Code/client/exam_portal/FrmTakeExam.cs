@@ -30,6 +30,7 @@ namespace exam_portal
                 }
             }
 
+            lblQstnNbr.Text = "1 .";
             lblQues.Text = avgList[0].question;
             lblOptA.Text = avgList[0].option_a;
             lblOptB.Text = avgList[0].option_b;
@@ -72,7 +73,7 @@ namespace exam_portal
                 return;
             }
 
-            
+            lblQstnNbr.Text = (i + 2).ToString() + " .";
 
             radioBtnA.Checked = radioBtnB.Checked = radioBtnC.Checked = radioBtnD.Checked = false;
             if (i >= (PassingValues.quesList.Count / 2) - 2)

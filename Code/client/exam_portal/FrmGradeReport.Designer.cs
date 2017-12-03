@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGradeReport));
-            this.lblQuestion = new System.Windows.Forms.Label();
+            this.lblGrd = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblMsg = new System.Windows.Forms.Label();
             this.btnGoHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblQuestion
+            // lblGrd
             // 
-            this.lblQuestion.AutoSize = true;
-            this.lblQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuestion.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.ForeColor = System.Drawing.Color.Black;
-            this.lblQuestion.Location = new System.Drawing.Point(227, 343);
-            this.lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(173, 29);
-            this.lblQuestion.TabIndex = 26;
-            this.lblQuestion.Text = "Your Grade is";
+            this.lblGrd.AutoSize = true;
+            this.lblGrd.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrd.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrd.ForeColor = System.Drawing.Color.Black;
+            this.lblGrd.Location = new System.Drawing.Point(227, 343);
+            this.lblGrd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGrd.Name = "lblGrd";
+            this.lblGrd.Size = new System.Drawing.Size(173, 29);
+            this.lblGrd.TabIndex = 26;
+            this.lblGrd.Text = "Your Grade is";
             // 
             // lblGrade
             // 
@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnGoHome);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.lblGrade);
-            this.Controls.Add(this.lblQuestion);
+            this.Controls.Add(this.lblGrd);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "frmGradeReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -108,7 +108,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblQuestion;
+        private System.Windows.Forms.Label lblGrd;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.Button btnGoHome;

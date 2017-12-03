@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartExam));
             this.lblHeading = new System.Windows.Forms.Label();
             this.btnStartExam = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblInstructions1 = new System.Windows.Forms.Label();
+            this.lblInstructions2 = new System.Windows.Forms.Label();
             this.lblQuesCount = new System.Windows.Forms.Label();
+            this.lblInstructions3 = new System.Windows.Forms.Label();
+            this.lblInstructions4 = new System.Windows.Forms.Label();
+            this.lblInstructions5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -54,7 +57,7 @@
             this.btnStartExam.BackColor = System.Drawing.Color.Thistle;
             this.btnStartExam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStartExam.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnStartExam.Location = new System.Drawing.Point(314, 322);
+            this.btnStartExam.Location = new System.Drawing.Point(314, 373);
             this.btnStartExam.Margin = new System.Windows.Forms.Padding(2);
             this.btnStartExam.Name = "btnStartExam";
             this.btnStartExam.Size = new System.Drawing.Size(152, 30);
@@ -63,31 +66,31 @@
             this.btnStartExam.UseVisualStyleBackColor = false;
             this.btnStartExam.Click += new System.EventHandler(this.btnStartExam_Click);
             // 
-            // label1
+            // lblInstructions1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(168, 231);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 19);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "This exam will have ";
+            this.lblInstructions1.AutoSize = true;
+            this.lblInstructions1.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions1.ForeColor = System.Drawing.Color.Blue;
+            this.lblInstructions1.Location = new System.Drawing.Point(168, 231);
+            this.lblInstructions1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstructions1.Name = "lblInstructions1";
+            this.lblInstructions1.Size = new System.Drawing.Size(176, 19);
+            this.lblInstructions1.TabIndex = 45;
+            this.lblInstructions1.Text = "This exam will have ";
             // 
-            // label2
+            // lblInstructions2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(357, 231);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "questions";
+            this.lblInstructions2.AutoSize = true;
+            this.lblInstructions2.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions2.ForeColor = System.Drawing.Color.Blue;
+            this.lblInstructions2.Location = new System.Drawing.Point(357, 231);
+            this.lblInstructions2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstructions2.Name = "lblInstructions2";
+            this.lblInstructions2.Size = new System.Drawing.Size(87, 19);
+            this.lblInstructions2.TabIndex = 47;
+            this.lblInstructions2.Text = "questions";
             // 
             // lblQuesCount
             // 
@@ -102,6 +105,45 @@
             this.lblQuesCount.TabIndex = 49;
             this.lblQuesCount.Text = "q";
             // 
+            // lblInstructions3
+            // 
+            this.lblInstructions3.AutoSize = true;
+            this.lblInstructions3.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions3.ForeColor = System.Drawing.Color.Blue;
+            this.lblInstructions3.Location = new System.Drawing.Point(168, 259);
+            this.lblInstructions3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstructions3.Name = "lblInstructions3";
+            this.lblInstructions3.Size = new System.Drawing.Size(277, 19);
+            this.lblInstructions3.TabIndex = 50;
+            this.lblInstructions3.Text = "HONOR CODE should be followed";
+            // 
+            // lblInstructions4
+            // 
+            this.lblInstructions4.AutoSize = true;
+            this.lblInstructions4.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions4.ForeColor = System.Drawing.Color.Blue;
+            this.lblInstructions4.Location = new System.Drawing.Point(217, 292);
+            this.lblInstructions4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstructions4.Name = "lblInstructions4";
+            this.lblInstructions4.Size = new System.Drawing.Size(443, 16);
+            this.lblInstructions4.TabIndex = 51;
+            this.lblInstructions4.Text = "When following the Honor Code a student must work entirely alone";
+            // 
+            // lblInstructions5
+            // 
+            this.lblInstructions5.AutoSize = true;
+            this.lblInstructions5.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions5.ForeColor = System.Drawing.Color.Blue;
+            this.lblInstructions5.Location = new System.Drawing.Point(218, 315);
+            this.lblInstructions5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstructions5.Name = "lblInstructions5";
+            this.lblInstructions5.Size = new System.Drawing.Size(454, 16);
+            this.lblInstructions5.TabIndex = 52;
+            this.lblInstructions5.Text = "When following the Honor Code a student may not share information";
+            // 
             // frmStartExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,9 +151,12 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(822, 602);
+            this.Controls.Add(this.lblInstructions5);
+            this.Controls.Add(this.lblInstructions4);
+            this.Controls.Add(this.lblInstructions3);
             this.Controls.Add(this.lblQuesCount);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblInstructions2);
+            this.Controls.Add(this.lblInstructions1);
             this.Controls.Add(this.btnStartExam);
             this.Controls.Add(this.lblHeading);
             this.ForeColor = System.Drawing.SystemColors.Control;
@@ -126,8 +171,11 @@
         #endregion
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Button btnStartExam;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblInstructions1;
+        private System.Windows.Forms.Label lblInstructions2;
         private System.Windows.Forms.Label lblQuesCount;
+        private System.Windows.Forms.Label lblInstructions3;
+        private System.Windows.Forms.Label lblInstructions4;
+        private System.Windows.Forms.Label lblInstructions5;
     }
 }
