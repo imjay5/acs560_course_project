@@ -116,7 +116,7 @@ namespace exam_portal
             dg.DataSource = dataTable;
 
             dg.AutoResizeColumns();
-            dg.Size = new System.Drawing.Size(800, 400);
+            dg.Size = new System.Drawing.Size(800, 375);
             dg.AllowUserToAddRows = false;
             dg.MultiSelect = false;
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
