@@ -29,7 +29,7 @@ namespace exam_portal
         public string option_d;
         public string answer;
         public string difficulty_level;
-        public int count=1;
+        public int count=0;
         public string msg;
 
         public string createQuestionJson(Question question)

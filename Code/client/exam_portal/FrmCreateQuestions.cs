@@ -25,10 +25,7 @@ namespace exam_portal
         Question ques = new Question();
         string question_label;
         string mode = "new";
-        string curr_diff_level = "";
-        int delete_count = 0;
-        int insert_flag = 0;
-
+        
         public frmCreateQuestions()
         {
             InitializeComponent();
