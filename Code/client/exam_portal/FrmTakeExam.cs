@@ -16,10 +16,9 @@ namespace exam_portal
         public frmTakeExam()
         {
             InitializeComponent();
-            
 
             for (int j = 0; j < (PassingValues.quesList.Count); j++)
-            {
+                {
                 if (PassingValues.quesList[j].difficulty_level == "Average")
                 {
                     avgList.Add(PassingValues.quesList[j]);
@@ -29,6 +28,8 @@ namespace exam_portal
                     diffList.Add(PassingValues.quesList[j]);
                 }
             }
+
+            
 
             lblQstnNbr.Text = "1 .";
             lblQues.Text = avgList[0].question;
@@ -73,6 +74,7 @@ namespace exam_portal
                 return;
             }
 
+
             lblQstnNbr.Text = (i + 2).ToString() + " .";
 
             radioBtnA.Checked = radioBtnB.Checked = radioBtnC.Checked = radioBtnD.Checked = false;
@@ -89,8 +91,8 @@ namespace exam_portal
                 frmGradeReport gradeReport = new frmGradeReport();
                 this.Hide();
                 gradeReport.Show();
-                //MessageBox.Show("AvgCount is " + avgCount + "DiffCount is " + diffCount);
             }
+            int diffI = 0;
 
             if (userAnswer == avgList[i].answer && lblFlag.Text == "Average")
             {
@@ -101,9 +103,10 @@ namespace exam_portal
                 lblOptD.Text = diffList[i].option_d;
                 lblFlag.Text = "Difficult";
                 avgCount++;
+                diffI++;
             }
 
-            else if (userAnswer == diffList[i].answer && lblFlag.Text == "Difficult" && i < (PassingValues.quesList.Count / 2) - 1)
+            else if (userAnswer == diffList[diffI].answer && lblFlag.Text == "Difficult" && i < (PassingValues.quesList.Count / 2)-1)
             {
                 lblQues.Text = diffList[i + 1].question;
                 lblOptA.Text = diffList[i + 1].option_a;
@@ -112,8 +115,10 @@ namespace exam_portal
                 lblOptD.Text = diffList[i + 1].option_d;
                 lblFlag.Text = "Difficult";
                 diffCount++;
+                
             }
-            else if(i < (PassingValues.quesList.Count / 2) - 1)
+
+            else if(i < (PassingValues.quesList.Count / 2)-1)
             {
                 lblQues.Text = avgList[i + 1].question;
                 lblOptA.Text = avgList[i + 1].option_a;
@@ -121,8 +126,10 @@ namespace exam_portal
                 lblOptC.Text = avgList[i + 1].option_c;
                 lblOptD.Text = avgList[i + 1].option_d;
                 lblFlag.Text = "Average";
+                
             }
             i++;
+            
         }
 
         public string calculateScore()
