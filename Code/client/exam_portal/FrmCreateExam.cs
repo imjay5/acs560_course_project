@@ -87,7 +87,7 @@ namespace exam_portal
                     btnExam.Text = "Create Exam";
                     break;
                 case "EditExam":
-                    btnExam.Text = "Save & Close";
+                    btnExam.Text = "Save && Close";
                     btnGoToQuestions.Visible = true;
                     Exam exam = new Exam();
                     exam.exam_id = PassingValues.ExamId;

@@ -116,7 +116,7 @@ namespace exam_portal
             dg.DataSource = dataTable;
 
             dg.AutoResizeColumns();
-            dg.Size = new System.Drawing.Size(800, 375);
+            dg.Size = new System.Drawing.Size(800, 450);
             dg.AllowUserToAddRows = false;
             dg.MultiSelect = false;
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -320,7 +320,7 @@ namespace exam_portal
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("curr row index "+dg.CurrentRow.Index+" list count "+list_count);
+            
             if (dg.CurrentRow.Index >= list_count)
             {
                 dg.Rows.RemoveAt(dg.CurrentRow.Index);

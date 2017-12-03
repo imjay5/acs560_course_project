@@ -45,7 +45,7 @@
             this.btnDeleteQuestion.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnDeleteQuestion.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnDeleteQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteQuestion.Location = new System.Drawing.Point(231, 404);
+            this.btnDeleteQuestion.Location = new System.Drawing.Point(231, 442);
             this.btnDeleteQuestion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDeleteQuestion.Name = "btnDeleteQuestion";
             this.btnDeleteQuestion.Size = new System.Drawing.Size(143, 23);
@@ -60,12 +60,12 @@
             this.btnAddQuestion.Enabled = false;
             this.btnAddQuestion.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddQuestion.Location = new System.Drawing.Point(391, 404);
+            this.btnAddQuestion.Location = new System.Drawing.Point(391, 442);
             this.btnAddQuestion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(122, 23);
             this.btnAddQuestion.TabIndex = 2;
-            this.btnAddQuestion.Text = "Add New Question";
+            this.btnAddQuestion.Text = "Submit New Question";
             this.btnAddQuestion.UseVisualStyleBackColor = false;
             this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(525, 404);
+            this.btnEdit.Location = new System.Drawing.Point(525, 442);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(146, 23);
@@ -88,7 +88,7 @@
             this.btnClose.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(500, 454);
+            this.btnClose.Location = new System.Drawing.Point(500, 492);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(71, 23);
@@ -102,7 +102,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(590, 454);
+            this.btnSubmit.Location = new System.Drawing.Point(590, 492);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(81, 23);
@@ -116,7 +116,7 @@
             this.btnAddRow.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnAddRow.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnAddRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRow.Location = new System.Drawing.Point(172, 370);
+            this.btnAddRow.Location = new System.Drawing.Point(172, 408);
             this.btnAddRow.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAddRow.Name = "btnAddRow";
             this.btnAddRow.Size = new System.Drawing.Size(71, 23);
@@ -130,7 +130,7 @@
             this.btnDeleteRow.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnDeleteRow.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
             this.btnDeleteRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteRow.Location = new System.Drawing.Point(248, 370);
+            this.btnDeleteRow.Location = new System.Drawing.Point(248, 408);
             this.btnDeleteRow.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDeleteRow.Name = "btnDeleteRow";
             this.btnDeleteRow.Size = new System.Drawing.Size(71, 23);
@@ -145,7 +145,7 @@
             this.pnlQuestions.Location = new System.Drawing.Point(172, 192);
             this.pnlQuestions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pnlQuestions.Name = "pnlQuestions";
-            this.pnlQuestions.Size = new System.Drawing.Size(716, 157);
+            this.pnlQuestions.Size = new System.Drawing.Size(716, 210);
             this.pnlQuestions.TabIndex = 0;
             // 
             // lblEditExam
