@@ -32,6 +32,7 @@
             this.btnCreateExam = new System.Windows.Forms.Button();
             this.pnlExams = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlExams.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,13 +75,27 @@
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(711, 124);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(97, 29);
+            this.linkLabel1.TabIndex = 21;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Logout";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frmAdminHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(820, 594);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pnlExams);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -90,6 +105,7 @@
             this.Load += new System.EventHandler(this.frmAdminHome_Load);
             this.pnlExams.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +114,6 @@
         private System.Windows.Forms.Button btnCreateExam;
         private System.Windows.Forms.Panel pnlExams;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

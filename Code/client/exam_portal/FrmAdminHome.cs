@@ -176,5 +176,12 @@ namespace exam_portal
             frmReport frm = new frmReport();
             frm.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
     }
 }
