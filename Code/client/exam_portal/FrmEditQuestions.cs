@@ -168,10 +168,13 @@ namespace exam_portal
                 string msg = ques.updateQuestionJson(ques);
                 if (msg == "success")
                 {
-                   dg = new DataGridView();
-                   dt = new DataTable();
-                   List<Question> allQuestionsList = ques.getAllQuestionsJson();
-                   formDataGrid(allQuestionsList);
+                    frmEditQuestions frm = new frmEditQuestions();
+                    frm.Show();
+                    this.Hide();
+                    //dg = new DataGridView();
+                   //dt = new DataTable();
+                   //List<Question> allQuestionsList = ques.getAllQuestionsJson();
+                   //formDataGrid(allQuestionsList);
                 }
             }
         }
