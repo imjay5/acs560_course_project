@@ -40,7 +40,7 @@
             // linkLblRegister
             // 
             this.linkLblRegister.AutoSize = true;
-            this.linkLblRegister.BackColor = System.Drawing.Color.White;
+            this.linkLblRegister.BackColor = System.Drawing.Color.Transparent;
             this.linkLblRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblRegister.Location = new System.Drawing.Point(337, 476);
             this.linkLblRegister.Name = "linkLblRegister";
@@ -64,7 +64,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Thistle;
+            this.btnLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(370, 414);
             this.btnLogin.Name = "btnLogin";

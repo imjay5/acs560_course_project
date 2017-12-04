@@ -264,6 +264,7 @@
             this.Controls.Add(this.lblOptionC);
             this.Controls.Add(this.lblOptionB);
             this.Controls.Add(this.lblOptionA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmTakeExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTakeExam";

@@ -37,10 +37,10 @@
             // 
             this.pnlReport.AutoScroll = true;
             this.pnlReport.BackColor = System.Drawing.Color.Transparent;
-            this.pnlReport.Location = new System.Drawing.Point(155, 179);
-            this.pnlReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlReport.Location = new System.Drawing.Point(136, 179);
+            this.pnlReport.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReport.Name = "pnlReport";
-            this.pnlReport.Size = new System.Drawing.Size(446, 267);
+            this.pnlReport.Size = new System.Drawing.Size(551, 267);
             this.pnlReport.TabIndex = 0;
             // 
             // lblExamsRep
@@ -63,7 +63,7 @@
             this.ClientSize = new System.Drawing.Size(822, 602);
             this.Controls.Add(this.lblExamsRep);
             this.Controls.Add(this.pnlReport);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";

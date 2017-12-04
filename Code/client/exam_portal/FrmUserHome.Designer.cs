@@ -122,6 +122,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblHello);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUserHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Home";

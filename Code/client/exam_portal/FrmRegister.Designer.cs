@@ -131,7 +131,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.Thistle;
+            this.btnRegister.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnRegister.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(390, 440);
             this.btnRegister.Name = "btnRegister";
@@ -144,7 +144,7 @@
             // linkLblLogin
             // 
             this.linkLblLogin.AutoSize = true;
-            this.linkLblLogin.BackColor = System.Drawing.Color.LightCyan;
+            this.linkLblLogin.BackColor = System.Drawing.Color.Transparent;
             this.linkLblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblLogin.Location = new System.Drawing.Point(347, 512);
             this.linkLblLogin.Name = "linkLblLogin";
@@ -195,6 +195,7 @@
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";

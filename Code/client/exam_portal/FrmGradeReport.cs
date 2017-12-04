@@ -18,7 +18,7 @@ namespace exam_portal
 
             lblGrade.Text = PassingValues.grade;
 
-            if(lblGrade.Text == "D" || lblGrade.Text == "C")
+            if(lblGrade.Text == "C")
             {
                 lblMsg.Text = "Study hard..!!";
             }

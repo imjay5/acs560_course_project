@@ -75,7 +75,7 @@ namespace exam_portal
             }
 
 
-            lblQstnNbr.Text = (i + 2).ToString() + " .";
+            
 
             radioBtnA.Checked = radioBtnB.Checked = radioBtnC.Checked = radioBtnD.Checked = false;
             if (i >= (PassingValues.quesList.Count / 2) - 2)
@@ -92,6 +92,8 @@ namespace exam_portal
                 this.Hide();
                 gradeReport.Show();
             }
+
+            lblQstnNbr.Text = (i + 2).ToString() + " .";
             int diffI = 0;
 
             if (userAnswer == avgList[i].answer && lblFlag.Text == "Average")
@@ -145,17 +147,13 @@ namespace exam_portal
             {
                 grade = "A";
             }
-            else if (score >= 0.7 * maxScore && score < 0.85 * maxScore)
+            else if (score >= 0.6 * maxScore && score < 0.85 * maxScore)
             {
                 grade = "B";
             }
-            else if (score >= 0.5 * maxScore && score < 0.7 * maxScore)
-            {
-                grade = "C";
-            }
             else
             {
-                grade = "D";
+                grade = "C";
             }
             return grade;
         }

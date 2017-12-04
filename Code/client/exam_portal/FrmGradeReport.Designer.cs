@@ -98,6 +98,7 @@
             this.Controls.Add(this.lblGrade);
             this.Controls.Add(this.lblGrd);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmGradeReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grade Report";

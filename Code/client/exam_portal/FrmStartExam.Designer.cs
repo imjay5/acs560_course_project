@@ -127,9 +127,9 @@
             this.lblInstructions4.Location = new System.Drawing.Point(217, 292);
             this.lblInstructions4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInstructions4.Name = "lblInstructions4";
-            this.lblInstructions4.Size = new System.Drawing.Size(443, 16);
+            this.lblInstructions4.Size = new System.Drawing.Size(447, 16);
             this.lblInstructions4.TabIndex = 51;
-            this.lblInstructions4.Text = "When following the Honor Code a student must work entirely alone";
+            this.lblInstructions4.Text = "When following the Honor Code, a student must work entirely alone";
             // 
             // lblInstructions5
             // 
@@ -140,9 +140,9 @@
             this.lblInstructions5.Location = new System.Drawing.Point(218, 315);
             this.lblInstructions5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInstructions5.Name = "lblInstructions5";
-            this.lblInstructions5.Size = new System.Drawing.Size(454, 16);
+            this.lblInstructions5.Size = new System.Drawing.Size(458, 16);
             this.lblInstructions5.TabIndex = 52;
-            this.lblInstructions5.Text = "When following the Honor Code a student may not share information";
+            this.lblInstructions5.Text = "When following the Honor Code, a student may not share information";
             // 
             // frmStartExam
             // 
@@ -160,6 +160,7 @@
             this.Controls.Add(this.btnStartExam);
             this.Controls.Add(this.lblHeading);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmStartExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStartExams";
