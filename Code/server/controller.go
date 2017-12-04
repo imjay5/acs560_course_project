@@ -7,6 +7,8 @@
  *   Author          Type of change          Description
  *   Kanika			 Addition				 Created File
  *   Kanika			 Addition				 Added method process_data()
+ *	 Jaya			 Addition				 Added cases for login(), register()
+ *	 Jaya			 Addition				 Added cases for selectExam(), takeExam()
  **************************************************************/
 
 package main
@@ -42,15 +44,15 @@ func (controller *Controller) process_data(msg *json.Decoder, handler string) st
 		response = obj.selectExam(msg)
 
 	case "takeExam":
-		obj := QuestionDetails{}
+		obj := ExamDetails{}
 		response = obj.takeExam(msg)
 
 	case "takenExams":
-		obj := UserTakenExams{}
+		obj := ExamDetails{}
 		response = obj.takenExams(msg)
 
 	case "updateGrades":
-		obj := GradeDetails{}
+		obj := ExamDetails{}
 		response = obj.updateGrades(msg)
 
 	case "getExam":

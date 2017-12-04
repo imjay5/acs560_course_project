@@ -1,3 +1,16 @@
+/**************************************************************
+ * register.go
+ *
+ * Implements functions for User login module
+ *
+ * 	                Version History
+ * ------------------------------------------------------------
+ *   Author          Type of change          Description
+ *   Jaya			 Addition				 Created File
+ *   Jaya			 Addition				 Added methods login()
+ *   Jaya			 Addition				 Added methods register()
+ **************************************************************/
+
 package main
 
 import (
@@ -23,13 +36,11 @@ func (user UserDetails) register(msg *json.Decoder) string {
 	fmt.Println("Success", json)
 	fmt.Println(userDetails.Email)
 
-	//New code
 	query := "select user_id from user_details where email=?"
 	parameters := []interface{}{userDetails.Email}
 	flag, rows := op.get_data(query, parameters)
 	fmt.Println(flag, user_id, rows)
 
-	//i := 0
 	if rows.Next() {
 		response = `{"msg": "failure"}`
 	} else {
@@ -52,25 +63,27 @@ func (login UserDetails) login(msg *json.Decoder) string {
 	op := Database_Operations{}
 	var userDetails UserDetails
 	var user_id int
+	var name string
 	var admin_key bool
 	var flag bool
+	var password string
 
 	json := msg.Decode(&userDetails)
 	fmt.Println("Success", json)
 
-	query := "select user_id,admin_key from user_details where email=? and password=?"
-	parameters := []interface{}{userDetails.Email, userDetails.Pwd}
+	query := "select user_id,name,password,admin_key from user_details where email=?"
+	parameters := []interface{}{userDetails.Email}
 	flag, rows := op.get_data(query, parameters)
 	for rows.Next() {
 
-		err := rows.Scan(&user_id, &admin_key)
+		err := rows.Scan(&user_id, &name, &password, &admin_key)
 		if err != nil {
 			log.Fatal(err)
 		}
-		log.Println("select result ", user_id, admin_key, flag)
+		log.Println("select result ", user_id, name, admin_key, flag)
 
 	}
 
-	response := fmt.Sprintf("%s%d%s%t%s", `{"msg": "success", "user_id": `, user_id, `,"admin_key" : `, admin_key, `}`)
+	response := fmt.Sprintf("%s%d%s%s%s%s%s%t%s", `{"msg": "success", "user_id": `, user_id, `,"name" : "`, name, `","password" : "`, password, `","admin_key" : `, admin_key, `}`)
 	return response
 }
